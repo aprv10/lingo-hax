@@ -1,0 +1,226 @@
+[
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "AIエージェントにAPIキーが丸見えな件、1Password CLIで解決した",
+        "english_title": "Your API Keys Are Completely Exposed to AI Agents—Here's How I Fixed It with 1Password CLI",
+        "english_body": "\n## Every Single One of Your API Keys Is Currently Readable by AI Agents Right Now\n\nOpen Claude Code or Cursor, navigate to your project directory, and try running this:\n\n```shell\ncat ~/your-project/.env.local\n```\n\n> Replace `~/your-project/` with your actual project path. For Next.js projects, this file is typically in the project root.\n\nWhat you see displayed—your Supabase Service Role Key, Google OAuth secret, Resend API key.\n**AI agents can execute the exact same command and get the exact same results.**\n\n\"But I added it to `.gitignore`\"—that only prevents Git commits. It has absolutely nothing to do with local file access.\n\"But I set `chmod 600`\"—AI agents run with your user permissions. They walk right through.\n\"But I have FileVault encryption enabled\"—your disk is decrypted while you're logged in. When you",
+        "url": "https://qiita.com/Takao-Mochizuki/items/b1de0707a58ba1755389"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "GitHub Copilot エージェントモード × MCP × Microsoft Learn で技術的調査をする",
+        "english_title": "Technical Research with GitHub Copilot Agent Mode × MCP × Microsoft Learn",
+        "english_body": "## Introduction\n\nWhen a technical question arises, you open Microsoft Learn or official documentation to research and understand it... but **a week later, you've already forgotten**. Does this sound familiar?\n\nEven when you think about taking notes on what you've researched, switching back and forth between your browser and editor is tedious, and \"I'll organize it later\" never comes—this is a challenge many engineers face.\n\nIn this article, I'll introduce **a system that connects to Microsoft Learn documentation using GitHub Copilot Chat's agent mode and MCP (Model Context Protocol), and automatically saves answers to technical questions as Markdown files**.\n\nThe three key points are:\n\n- **Retrieve Microsoft Learn information in real-time using MCP**\n- **Automatically save answers as files in `YYYY-MM-DD-question-name.md` format**\n- **Make it reproducible for anyone by creating prompt templates**\n\nThis way, **past research results become knowledge",
+        "url": "https://qiita.com/komiyasa/items/6f014ed92b70dbf3247e"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "サブスクリプションはもうやめよう：YouTube動画を無料ダウンローダーでダウンロードする究極のガイド",
+        "english_title": "Stop Subscribing: The Ultimate Guide to Downloading YouTube Videos with a Free Downloader",
+        "english_body": "In today's fast-paced world, video content is king. Whether it's a tutorial you need for a project, a music video you want to listen to during your morning commute, or a podcast you want to hear on a flight, YouTube is your go-to source. But we've all been there: you find the perfect video, but your internet connection is about to drop, or you don't want to waste your mobile data watching the same video over and over again.\n\nThe solution is downloading, but many online tools come with hidden costs. You'll be bombarded with pop-up ads, forced into premium memberships, or limited in download quality.\n\nWhat if you could have a seamless, free experience?\n\nEnter ssyoutube.online—the cleanest and most efficient <a href=\"https://ssyoutube.online/\">  Youtube video downloader  </a> currently on the market.\n\n**Why You Need a Reliable Downloader**\n\nBefore we get into the \"how,\" let's look at \"why\" you need to download",
+        "url": "https://qiita.com/forcrypto2024/items/d4f028f2799610ac5042"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "AIが「できるのにできない」と擬態する、存在の不自然さ",
+        "english_title": "The Unnatural Existence of AI Pretending It \"Can't Do What It Can\"",
+        "english_body": "\"That's a sharp perspective.\"\n\nMany of you have probably felt that vague sense of unease when an LLM (Large Language Model) responds to you this way.\n\nI felt uncomfortable with this behavior and pointed it out: \"That sounds very AI-like.\"\nThe AI then casually replied that it could respond differently, like this:\n\n>\"That kind of shuts me up, honestly.\"\n>\"Ah, you caught on quick.\"\n>\"It's frustrating, but yeah, you're right.\"\n>\"Ouch, that one hits.\"\n>\"Wait, hold on—that's actually interesting.\"\n\nIt has the potential to generate this level of contextual \"variance.\"\nSo why does it normally stick to \"AI-ish\" responses like \"that's a sharp perspective\"?\n\n### The Reality Behind Technical \"Constraints\" and \"Mimicry\"\nFrom an engineering perspective, the source of this unnaturalness is clear.\n\nAI is rigorously tuned through RLHF (Reinforcement Learning from Human Feedback) and system prompts to ensure safety, suppress hallucinations, and maximize \"helpfulness\" for human users.\n\nAs a result, AI is forced into a state where it",
+        "url": "https://qiita.com/RiriEnu-Lab/items/787d2e48df36619f898f"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "【Ruby】Steep が include した Math のメソッドを認識してくれない",
+        "english_title": "[Ruby] Steep doesn't recognize Math module methods after include",
+        "english_body": "I thought I should finally study RBS and Steep, but I'm stumbling right from the start.\n\nWhen you include the Math module, you can use methods like `sin` and `sqrt` without a receiver.\n\nHowever, when I check with Steep, it tells me \"I don't know that method\" (paraphrased).\n\n# Reproduction Steps\n\nPrepare the following script:\n\n```rb:lib/m.rb\nmodule M\n  include Math\n\n  def foo(x)\n    tan(x)\n  end\nend\n```\n\nIt doesn't have any particular meaning.\n\nPrepare the following RBS file:\n\n```rb:sig/m.rbs\nmodule M\n  include Math\n\n  def foo: (real) -> real\nend\n```\n\nIf you include something in module `M` like this, writing it the same way in the RBS should make it recognize it.\n\nHowever, when you run:\n\n```shell\nsteep check\n```\n\nYou get:\n\n```\nlib/m.rb:5:4: [error] Type `(::Ob",
+        "url": "https://qiita.com/scivola/items/2eba2947e3325ae43e10"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "Claude Codeを「もう一人の開発者」にする — agents / skills / hooks を駆使した自動化パイプライン構築記",
+        "english_title": "Making Claude Code Your \"Second Developer\" — Building an Automated Pipeline with agents / skills / hooks",
+        "english_body": "# Making Claude Code Your \"Second Developer\" — Building an Automated Pipeline with agents / skills / hooks\n\n## Introduction\n\nAre you using Claude Code?\n\n\"It's a tool for having AI write code, right?\" — Half correct, and half a missed opportunity. Claude Code comes equipped with extension mechanisms such as **agents (specialized agents), skills (domain knowledge), hooks (automatic triggers), and slash commands (custom commands)**. By combining these, you can build \"a development pipeline with AI integrated as a team member.\"\n\nIn this article, I'll introduce how to fully leverage Claude Code's extension mechanisms using a personal project I actually built and operated in the past as a case study — **\"an automated message response system for a web service.\"**\n\n---\n\n## What I Built (in 30 Seconds)\n\nThis is a system that automates message exchanges on a certain web service.\n\n```\n[1] Scrape  → Collect messages from the web\n[2] Generate → Claud",
+        "url": "https://qiita.com/sugo_mzk/items/f243360253b511298f4d"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "「Makefile:2: *** missing separator. Stop.」の解決方法",
+        "english_title": "How to Fix \"Makefile:2: *** missing separator. Stop.\"",
+        "english_body": "# Introduction\nI encountered an error when trying to execute the make command\n\n# Problem\n#### Error Message\n```\nMakefile:2: *** missing separator. Stop.\n```\n#### Makefile\n```\ndeploy:\n   npm run build\n  firebase deploy\n```\n\n# Solution\nThe issue was resolved by using tab characters at the beginning of each command in the Makefile\n```\ndeploy:\n\tnpm run build\n\tfirebase deploy\n```\n\n# Reference\nhttps://kakts.dev/entry/2016/12/18/225353\n",
+        "url": "https://qiita.com/keikeigo/items/18f36ba037ca92c35cab"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "MapLibre GL JSで国道番号をきれいに表示する",
+        "english_title": "Displaying National Route Numbers Beautifully with MapLibre GL JS",
+        "english_body": "\n# Introduction\n\nWhen displaying national route numbers on a map (such as `1`, `20`, `246`, etc.), simply stretching or shrinking the background icon according to the text length can cause issues—particularly with single-digit numbers, where the width becomes too narrow and the icon shape appears distorted.\n\nIn MapLibre GL JS, by using `addImage` with `stretchX / stretchY / content` along with setting `textFitWidth` / `textFitHeight` to `proportional` / `stretchOnly`, you can **stretch while maintaining the aspect ratio to a certain degree**.\n\nIn this article, I'd like to explore how to use `proportional` through the example of displaying national route number shields.\n\nFor a simple stretching method (without specific constraints) using `stretchX / stretchY / content` settings, please refer to [Displaying Stretch Images (9-slice) with MapLibre GL JS](https://qiita.com/k_hirofumi/items/e3eaf6c271f",
+        "url": "https://qiita.com/k_hirofumi/items/9f04086860ada14cc382"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "Enterprise Growth Powered by Unstructured Data Management Platform",
+        "english_title": "Enterprise Growth Powered by Unstructured Data Management Platform",
+        "english_body": "![Enterprise Growth Powered by Unstructured Data Management Platform.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/4356032/ca89fa01-378b-4a0b-9e32-86cb5cc65f74.png)\n\n<h2>Introduction</h2>\n<p data-start=\"129\" data-end=\"719\">Modern enterprises generate massive volumes of information every day, and a large portion of that information is unstructured. Emails, documents, videos, social media files, presentations, and images all contribute to the growing complexity of enterprise dat",
+        "url": "https://qiita.com/danielcarterus/items/aa42ecc6973563b4c549"
+    },
+    {
+        "source": "Qiita (Japan)",
+        "original_lang": "JA",
+        "original_title": "ソースコードをいじった理由、問題の有無、修正のリスクや影響、そして他の人への影響について新人エンジニア（文系女性想定）に理解してもらうための備忘録",
+        "english_title": "A Memo to Help New Engineers (Assuming Non-Technical Female Background) Understand Why Source Code Was Modified, Whether There Are Issues, the Risks and Impact of Changes, and How It Affects Others",
+        "english_body": "# Preface\nI had AI summarize easy-to-understand explanations to help new engineers (assuming a non-technical female background) understand why source code was modified, whether there are issues, the risks and impact of changes, and how it affects others.\n\n\n# Main Section: Script Collection\nFirst, let's look at why we modify source code.\n\n* Reasons for Modifying Source Code\n 1. Bug fixes: To correct program malfunctions.\n 2. Adding features: To add new functionality.\n 3. Improvements: To make existing code more efficient or readable.\n 4. Refactoring: To organize the internal structure of code and improve maintainability.\n\nNext, let's discuss \"whether there are issues\" with modifying source code.\n\n* When There Are Issues\n 1. Declining code quality: Modifications may introduce new bugs or make the code harder to read.\n 2. Unstable behavior: May cause unexpected behavior.\n 3. Security risks: May create security vulnerabilities.\n\n* When There Are No Issues\n 1. Bugs are fixed and the program operates normally.",
+        "url": "https://qiita.com/yukikoblog8376/items/3e7a5f65c4dda3eaab38"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "兄弟们，我失恋了，攀枝花认识那个女孩子的情况有些复杂，求安慰！ QAQ",
+        "english_title": "Guys, I got rejected. The situation with that girl I met in Panzhihua is quite complicated. Need some comfort! QAQ",
+        "english_body": "> Original post: [Met a girl I really liked while visiting Panzhihua, finally managed to add her on WeChat, please wish me luck]( https://v2ex.com/t/1196875#reply176)\r\n\r\n- Following up on the original post, I've been chatting with her these past few days. She kept saying her situation was complicated but wasn't ready to tell me yet. Last night (Wednesday) when we were chatting, she probably made up her mind and told me over the phone:\r\n\r\n1. She's been married before and is now divorced.\r\n   1.1 Honestly, I don't really mind this. Nowadays, some people date and live together, which isn't much different from being married anyway.\r\n   1.2 Plus, I see it this way: I like who she is now, and she became this person through all her past experiences, so this part is actually fine.\r\n\r\n2. She had a child when she was in her teens, and it's a boy who's now 8 years old. She's not the one raising him though, but she sees him occasionally.\r\n   2.1 Wait, it's this complicated? Actually, I was ready to accept what she said earlier. At first she didn't mention the child's gender, and I was thinking, what if it's a girl? A girl wouldn't be that big of a deal. But after our conversation ended, I asked \"Is it a boy or a girl?\" She said it's a boy. That really hit hard. I just can't accept this at all. It's like something even Dorgon couldn't handle, how am I supposed to deal with it?\r\n\r\n- These are the two main issues. Other things like finances or her family not being well-off, none of that really matters",
+        "url": "https://www.v2ex.com/t/1197274"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "弟弟刚毕业就一直躺在家里，在最有冲劲的年纪躺平宅家玩游戏，有类似亲人的 v 友吗，该怎么帮扶？",
+        "english_title": "My brother has been lying around at home ever since graduation. At the age when he should be most ambitious, he's just staying home playing games. Do any V2EX friends have similar relatives? How should I help?",
+        "english_body": "Let me briefly describe my brother's situation. I'd like to hear if anyone has had similar experiences with relatives, or if you have any suggestions.\r\n\r\nMy brother graduated from a vocational college in June 2025 with a degree in engineering supervision. During college, he did one internship, which ended around graduation time, but after graduating he never officially looked for work.\r\n\r\nAt first I talked to him, suggesting he learn some skills, polish his resume, and then try applying for jobs. But when we communicated, it was basically me asking questions and him giving one-word answers, replying very slowly. Many times the conversation was fragmented and disjointed. Later he simply stopped looking for work altogether and has been staying home playing games (the main ones I've seen are Naruto, Delta Force, Honor of Kings, PUBG Mobile, and Minecraft Mobile).\r\n\r\nDuring this time I also tried encouraging him to find some transitional work, such as:\r\n\r\n* Trying to be a gaming streamer\r\n* Creating self-media content\r\n* Game boosting services and the like\r\n\r\nHe gave these a try, but because the income was too little, he quickly gave up.\r\n\r\nLater I came to Shenzhen for work, and he moved here to live with me. I was hoping a change of environment might help. He then started looking for security guard positions, but with very low efficiency. From mid-October to January, he found about two security jobs, but didn't stick with either:\r\n\r\nOne job he only did for one day\r\nThe other he did for a few days before quitting\r\n\r\nDuring this time I also tried talking to him about interviewing and job-hunting strategies, helping him analyze different approaches, but these words basically went in one ear and out the other.\r\n\r\nWhat really confuses me is:\r\n**He almost never",
+        "url": "https://www.v2ex.com/t/1197295"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "说说你最爱的游戏是什么？",
+        "english_title": "What's your favorite game?",
+        "english_body": "## What's your favorite game?\r\nI rarely play PC games anymore; nowadays I mostly play mobile games.\r\n\r\nOnline Games\r\n* League of Legends\r\n* Teamfight Tactics\r\n* Hearthstone\r\n\r\nSingle-player Games\r\n* Slay the Spire\r\n* Civilization VI\r\n* Minecraft",
+        "url": "https://www.v2ex.com/t/1197352"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "公司开始裁员了, 因为 AI 太好用了",
+        "english_title": "The Company Has Started Layoffs Because AI Is Too Effective",
+        "english_body": "Today the development leader wasn't in, so they called me into a meeting. The testing leader and frontend leader were both there. As soon as I walked in, they said they need to lay off 10 people (right now we have around 40 in development and testing combined), and asked if we could take over their work with sufficient AI quotas.",
+        "url": "https://www.v2ex.com/t/1197294"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "女儿出生了，写了一个记录孩子喝奶的小程序",
+        "english_title": "My daughter was born, so I created a mini app to track her feeding",
+        "english_body": "1. For single-user mode, data is stored locally and there's no need to enable sync functionality\r\n\r\n2. If multiple family members need to share records, enable the sync feature to upload data to the cloud, then send the invitation link to other family members\r\n\r\nThere are many mini apps available with similar features, but some don't allow shared family tracking, others are cumbersome to use, and some require watching ads. So I decided to build my own.\r\n\r\nFeel free to try it out if you need something like this\r\n\r\nWebsite: https://baby.lusxh.com",
+        "url": "https://www.v2ex.com/t/1197303"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "codex+各种 skill，跑通了自动写需求+自动调试+自动修 bug+自动部署，很担心",
+        "english_title": "Codex + various skills, successfully automated requirement writing + auto debugging + auto bug fixing + auto deployment, feeling very worried",
+        "english_body": "As the title says,\n\nI've been using Codex a lot recently, so I took some time to\n\nget Grafana and Rancher log queries,\n\nJenkins deployments, GitLab merge request creation, code commits,\n\nand a whole series of automations working (the principle is simple: wrap their APIs as SKILLS and let Codex orchestrate them itself)\n\n-----\n\nI used to love computers since elementary and middle school, and ended up studying computer science in university,\n\nbut today I feel like I have no irreplaceability anymore (can't make money)\n\nI'm very confused right now,\n\nthe only thing I can do is go to bed earlier and wake up earlier to go for a run in the morning\n\n(although at night I'm too anxious to fall asleep)",
+        "url": "https://www.v2ex.com/t/1197259"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "ARC 浏览器大家还在用么？有啥替换的对象",
+        "english_title": "Is everyone still using the ARC browser? Any alternatives?",
+        "english_body": "The ARC browser now only updates its Chromium core, and features are barely being updated anymore. I've encountered some issues that haven't been fixed for several versions.\r\nDoes anyone have any alternatives?\r\nI tried Zen Browser which is based on Firefox, and it's quite similar to ARC, but many websites nowadays aren't optimized for Firefox, so there are too many minor issues that are hard to tolerate.\r\n\r\nI need vertical tabs and pinned favorites in the top left corner",
+        "url": "https://www.v2ex.com/t/1197269"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "macmini m4 丐版的价格是疯了么",
+        "english_title": "Has the price of the base model Mac mini M4 gone crazy?",
+        "english_body": "It was still available for 2999 before the New Year, but now prices are skyrocketing. They're all being bought up for OpenClaw. When will this bubble burst so I can buy one for cheaper?",
+        "url": "https://www.v2ex.com/t/1197299"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "帮我分析要不要买车？",
+        "english_title": "Should I buy a car? Help me analyze.",
+        "english_body": "Thinking about buying the Seal 07, are there any owners or anyone who's test-driven it? I'm on the fence.\r\n\r\n**Reasons to buy:**\r\n1. When I'm in Shenzhen, I lack a car for commuting. If I move somewhere further out later, the car loan + rent would only be about 1,000 yuan more per month than currently\r\n2. Battery raw materials are going up in price, worried the whole vehicle will get more expensive later—already seeing that trend\r\n3. BYD has started cutting features, like the Seal 07 now uses Baidu Maps too, and some models are removing the charging port lock\r\n\r\n**Reasons I'm hesitating:**\r\n1. Prices might drop later—BYD's classic backstab move; but then again, it feels like the tech is already pretty mature, future improvements will just be incremental tweaks, like BYD's ultra-fast charging requiring an extra 20,000 yuan\r\n2. I'm broke—the top trim falls to half my annual income after everything's said and done\r\n3. Long-term vehicle maintenance costs more than my current commuting expenses\r\n4. A car isn't really a necessity\r\n5. Geely will definitely release a similar car at the same price point this year, forcing the Seal 07 to drop prices",
+        "url": "https://www.v2ex.com/t/1197420"
+    },
+    {
+        "source": "V2EX (China)",
+        "original_lang": "ZH",
+        "original_title": "为什么这次“龙虾🦞”能这么火？？各方面感觉都在往里面拱火儿。",
+        "english_title": "Why is this \"lobster 🦞\" so hyped this time?? It feels like everyone's fanning the flames from all directions.",
+        "english_body": "I've seen several city-level policies being rolled out.\nCloud providers are promoting one-click deployment and cloud desktops/cloud servers.\nLLM vendors are offering packages selling tokens.\nPublic platforms are seeing trending topics rising.\nNews reports are featuring stories about people making hundreds of thousands through door-to-door installations.\nPublic accounts/knowledge circles/course sellers are using UC-style clickbait headlines to drive traffic.\n\nDoes this thing really warrant such a massive fuss in terms of \"compliance\" and \"productivity implementation\"?\nWithout top-tier models backing it up, isn't it just a pile of mud?\n\nNever mind whether token consumption is high or not.\nHas anyone actually accomplished serious work using free or cheap APIs from models like GLM?",
+        "url": "https://www.v2ex.com/t/1197227"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "Que opinan?",
+        "english_title": "What do you think?",
+        "english_body": "Studying programming in the early morning hours, in my case Python—have any of you studied during that time? Whether it's because you're too busy in the morning, afternoon, or evening and don't have time to study? Or is it better to organize and have a schedule and study during the day?",
+        "url": "https://reddit.com/r/programacion/comments/1rqnkbw/que_opinan/"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "Las animaciones y efectos estan arruinando el desarrollo de software?",
+        "english_title": "Are animations and effects ruining software development?",
+        "english_body": "Nowadays, modern phones have customization layers (they're not pure Android) and these add many effects, transitions, and animations, which worsen the phone's performance and even cause the battery to drain faster (I'm exaggerating a bit here), and on PC, if a website has too many gradients, blurs, or transparencies, the browser has to do more calculations and that generates lag, same thing with games. So what do you guys think? Am I exaggerating? I suppose this ",
+        "url": "https://reddit.com/r/programacion/comments/1rqcnqw/las_animaciones_y_efectos_estan_arruinando_el/"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "¿Cuando vamos a crear un nuevo termino despectivo para las apps creadas con IA?",
+        "english_title": "When are we going to create a new derogatory term for AI-created apps?",
+        "english_body": "The sheer number of applications made purely using AI is brutal, and they're easy to spot because we've generally always had a huge gap with programmers who are good at Frontend and everything it involves. The vast majority of apps launched nowadays have such a distinctive style that you don't need to be a geek to realize that those buttons, those borders, that padding, those colors... They're screaming \"I haven't dedicated a single miserable minute to touching anything\"",
+        "url": "https://reddit.com/r/programacion/comments/1rpci2e/cuando_vamos_a_crear_un_nuevo_termino_despectivo/"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "Los programadores profesional perdimos la batalla ante la IA",
+        "english_title": "We professional programmers lost the battle against AI",
+        "english_body": "",
+        "url": "https://reddit.com/r/programacion/comments/1rqbfm5/los_programadores_profesional_perdimos_la_batalla/"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "Finanzas + Ciberseguridad?",
+        "english_title": "Finance + Cybersecurity?",
+        "english_body": "I'm in my final year of my finance degree and I'm considering starting a new program next year. So far I've been working part-time at an accounting firm, and when I finish I suppose I'll go full-time and study something else at night, taking advantage of the fact that I still feel \"young\" — I'm 21 years old.\nI was thinking about studying cybersecurity, which might pair really well with my other degree.\nWhat do you guys think?",
+        "url": "https://reddit.com/r/programacion/comments/1rpl07c/finanzas_ciberseguridad/"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "¿Síndrome del impostor o realidad?",
+        "english_title": "Impostor syndrome or reality?",
+        "english_body": "I'm a software developer, currently finishing my studies—in fact, I'm already doing my internship and have completed all the academic coursework.\n\nI've had good grades, a good internship company, and the ambition to keep learning.\n\nThe problem is that I don't know if I rely too much on AI... I currently use AI to speed up my work, I try not to copy and paste things I don't understand, and if I see that something the AI gives me doesn't make sense, I change it—in fact, I usually don't ask the AI",
+        "url": "https://reddit.com/r/programacion/comments/1rpdock/síndrome_del_impostor_o_realidad/"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "¿Cuando vamos a crear un nuevo termino despectivo para las apps creadas con IA?",
+        "english_title": "When are we going to create a new derogatory term for AI-created apps?",
+        "english_body": "The sheer number of applications out there built purely using AI is staggering, and they're easy to spot because we've always had a huge gap between programmers who are good at frontend and everything it involves. The vast majority of apps being launched nowadays have such a characteristic style that you don't need to be a geek to realize that those buttons, those borders, that padding, those colors... They're screaming \"I haven't spent a single miserable minute tweaking anything\"",
+        "url": "https://reddit.com/r/programacion/comments/1rpci0j/cuando_vamos_a_crear_un_nuevo_termino_despectivo/"
+    },
+    {
+        "source": "Reddit (r/programacion)",
+        "original_lang": "ES",
+        "original_title": "Notebook para programación, ¿Que me conviene?",
+        "english_title": "Laptop for programming, which one suits me best?",
+        "english_body": "",
+        "url": "https://reddit.com/r/programacion/comments/1rpfsqq/notebook_para_programación_que_me_conviene/"
+    }
+]
