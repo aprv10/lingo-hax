@@ -1,0 +1,6 @@
+httpx
+beautifulsoup4
+groq
+apscheduler
+aiosqlite
+python-dotenv
