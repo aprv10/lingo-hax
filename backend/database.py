@@ -17,6 +17,7 @@ async def init_db():
                 translated_title TEXT,
                 translated_body TEXT,
                 category TEXT,
+                secondary_category TEXT,
                 key_technologies TEXT,
                 novelty_score REAL,
                 english_coverage INTEGER,
@@ -34,64 +35,47 @@ async def init_db():
                 sources TEXT
             )
         """)
+        # Add secondary_category column if upgrading from old schema
+        try:
+            await db.execute("ALTER TABLE posts ADD COLUMN secondary_category TEXT")
+        except Exception:
+            pass  # Column already exists
         await db.commit()
     print("  ✓ Database initialized")
 
 
-async def insert_post(post: dict):
-    """Insert a post only if its id doesn't already exist (deduplication)."""
+async def bulk_insert_posts(posts: list[dict]):
+    """Insert multiple posts in a single transaction using executemany."""
+    if not posts:
+        return
+    rows = [
+        (
+            post["id"],
+            post.get("source", ""),
+            post.get("source_lang", ""),
+            post.get("original_title", ""),
+            post.get("translated_title", ""),
+            post.get("translated_body", ""),
+            post.get("category", "Other"),
+            post.get("secondary_category"),
+            json.dumps(post.get("key_technologies", [])),
+            post.get("novelty_score", 5),
+            1 if post.get("english_coverage", True) else 0,
+            post.get("score", 0),
+            post.get("url", ""),
+            post.get("scraped_at", ""),
+        )
+        for post in posts
+    ]
     async with aiosqlite.connect(DB_PATH) as db:
-        await db.execute(
+        await db.executemany(
             """INSERT OR IGNORE INTO posts
                (id, source, source_lang, original_title, translated_title,
-                translated_body, category, key_technologies, novelty_score,
-                english_coverage, score, url, scraped_at)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (
-                post["id"],
-                post.get("source", ""),
-                post.get("source_lang", ""),
-                post.get("original_title", ""),
-                post.get("translated_title", ""),
-                post.get("translated_body", ""),
-                post.get("category", "Other"),
-                json.dumps(post.get("key_technologies", [])),
-                post.get("novelty_score", 5),
-                1 if post.get("english_coverage", True) else 0,
-                post.get("score", 0),
-                post.get("url", ""),
-                post.get("scraped_at", ""),
-            ),
+                translated_body, category, secondary_category, key_technologies,
+                novelty_score, english_coverage, score, url, scraped_at)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            rows,
         )
-        await db.commit()
-
-
-async def bulk_insert_posts(posts: list[dict]):
-    """Insert multiple posts in a single transaction."""
-    async with aiosqlite.connect(DB_PATH) as db:
-        for post in posts:
-            await db.execute(
-                """INSERT OR IGNORE INTO posts
-                   (id, source, source_lang, original_title, translated_title,
-                    translated_body, category, key_technologies, novelty_score,
-                    english_coverage, score, url, scraped_at)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                (
-                    post["id"],
-                    post.get("source", ""),
-                    post.get("source_lang", ""),
-                    post.get("original_title", ""),
-                    post.get("translated_title", ""),
-                    post.get("translated_body", ""),
-                    post.get("category", "Other"),
-                    json.dumps(post.get("key_technologies", [])),
-                    post.get("novelty_score", 5),
-                    1 if post.get("english_coverage", True) else 0,
-                    post.get("score", 0),
-                    post.get("url", ""),
-                    post.get("scraped_at", ""),
-                ),
-            )
         await db.commit()
 
 
@@ -103,81 +87,128 @@ async def get_existing_ids() -> set[str]:
         return {row[0] for row in rows}
 
 
-async def get_velocity(category: str) -> float:
-    """
-    Compute velocity for a category:
-    ((posts in last 6h) - (posts in 6h-12h ago)) / max(posts in 6h-12h ago, 1) * 100
+async def bulk_save_trend_snapshots(snapshots: list[tuple[str, int, list[str]]]):
+    """Save multiple trend snapshots in a single transaction.
 
-    Returns float('inf') if previous window had 0 posts (brand new trend).
+    Each snapshot is a tuple: (category, post_count, sources_list).
+    """
+    if not snapshots:
+        return
+    now_iso = datetime.now(timezone.utc).isoformat()
+    rows = [
+        (cat, now_iso, count, json.dumps(sources))
+        for cat, count, sources in snapshots
+    ]
+    async with aiosqlite.connect(DB_PATH) as db:
+        await db.executemany(
+            """INSERT INTO trend_snapshots
+               (category, snapshot_time, post_count, sources)
+               VALUES (?, ?, ?, ?)""",
+            rows,
+        )
+        await db.commit()
+
+
+# Keep the single-call version for backward compat
+async def save_trend_snapshot(category: str, count: int, sources_list: list[str]):
+    """Save a single trend snapshot (delegates to bulk version)."""
+    await bulk_save_trend_snapshots([(category, count, sources_list)])
+
+
+async def get_velocity_batch(categories: list[str]) -> dict[str, float]:
+    """Compute velocity for multiple categories in a single DB connection.
+
+    Returns dict of category → velocity.
     """
     now = datetime.now(timezone.utc)
     six_hours_ago = (now - timedelta(hours=6)).isoformat()
     twelve_hours_ago = (now - timedelta(hours=12)).isoformat()
 
+    velocities: dict[str, float] = {}
     async with aiosqlite.connect(DB_PATH) as db:
-        # Current window: last 6 hours
-        cursor = await db.execute(
-            "SELECT COUNT(*) FROM posts WHERE category = ? AND scraped_at >= ?",
-            (category, six_hours_ago),
-        )
-        current = (await cursor.fetchone())[0]
+        for cat in categories:
+            cursor = await db.execute(
+                "SELECT COUNT(*) FROM posts WHERE category = ? AND scraped_at >= ?",
+                (cat, six_hours_ago),
+            )
+            current = (await cursor.fetchone())[0]
 
-        # Previous window: 6-12 hours ago
-        cursor = await db.execute(
-            "SELECT COUNT(*) FROM posts WHERE category = ? AND scraped_at >= ? AND scraped_at < ?",
-            (category, twelve_hours_ago, six_hours_ago),
-        )
-        previous = (await cursor.fetchone())[0]
+            cursor = await db.execute(
+                "SELECT COUNT(*) FROM posts WHERE category = ? AND scraped_at >= ? AND scraped_at < ?",
+                (cat, twelve_hours_ago, six_hours_ago),
+            )
+            previous = (await cursor.fetchone())[0]
 
-    if previous == 0 and current > 0:
-        return float("inf")
-    if previous == 0 and current == 0:
-        return 0.0
-    return ((current - previous) / max(previous, 1)) * 100
+            if previous == 0 and current > 0:
+                velocities[cat] = float("inf")
+            elif previous == 0 and current == 0:
+                velocities[cat] = 0.0
+            else:
+                velocities[cat] = ((current - previous) / max(previous, 1)) * 100
+
+    return velocities
 
 
-async def save_trend_snapshot(category: str, count: int, sources_list: list[str]):
-    """Save a point-in-time snapshot for a trend category."""
+# Keep single-call version for backward compat
+async def get_velocity(category: str) -> float:
+    """Compute velocity for a single category."""
+    result = await get_velocity_batch([category])
+    return result.get(category, 0.0)
+
+
+async def get_all_enriched_posts() -> list[dict]:
+    """Return all posts from the DB with their enriched fields.
+
+    Used by main.py to build trend exports from canonical DB data
+    instead of stale in-memory scraped data.
+    """
     async with aiosqlite.connect(DB_PATH) as db:
-        await db.execute(
-            "INSERT INTO trend_snapshots (category, snapshot_time, post_count, sources) VALUES (?, ?, ?, ?)",
-            (
-                category,
-                datetime.now(timezone.utc).isoformat(),
-                count,
-                json.dumps(sources_list),
-            ),
+        cursor = await db.execute(
+            """SELECT id, source, source_lang, original_title, translated_title,
+                      translated_body, category, secondary_category, key_technologies,
+                      novelty_score, english_coverage, score, url, scraped_at
+               FROM posts"""
         )
-        await db.commit()
+        rows = await cursor.fetchall()
+
+    return [
+        {
+            "id": r[0],
+            "source": r[1],
+            "source_lang": r[2],
+            "original_title": r[3],
+            "translated_title": r[4],
+            "translated_body": r[5],
+            "category": r[6] or "Other",
+            "secondary_category": r[7],
+            "key_technologies": json.loads(r[8]) if r[8] else [],
+            "novelty_score": r[9] if r[9] is not None else 5,
+            "english_coverage": bool(r[10]),
+            "score": r[11] or 0,
+            "url": r[12] or "",
+            "scraped_at": r[13] or "",
+        }
+        for r in rows
+    ]
 
 
 async def get_all_trends() -> list[dict]:
-    """
-    Return a list of dicts:
-    {category, post_count, velocity, sources, latest_posts (top 5 by score)}
-    """
+    """Return a list of trend dicts using efficient batched queries."""
     async with aiosqlite.connect(DB_PATH) as db:
-        db.row_factory = aiosqlite.Row
+        # Get category counts + sources in bulk
+        cursor = await db.execute(
+            "SELECT category, COUNT(*), GROUP_CONCAT(DISTINCT source) FROM posts GROUP BY category"
+        )
+        cat_rows = await cursor.fetchall()
 
-        # Get distinct categories
-        cursor = await db.execute("SELECT DISTINCT category FROM posts")
-        categories = [row[0] for row in await cursor.fetchall()]
+        categories = [row[0] for row in cat_rows]
 
+        # Get top 5 posts per category
         trends = []
-        for cat in categories:
-            # Count
-            cursor = await db.execute(
-                "SELECT COUNT(*) FROM posts WHERE category = ?", (cat,)
-            )
-            post_count = (await cursor.fetchone())[0]
+        for row in cat_rows:
+            cat, post_count, sources_str = row
+            sources = sources_str.split(",") if sources_str else []
 
-            # Unique sources
-            cursor = await db.execute(
-                "SELECT DISTINCT source FROM posts WHERE category = ?", (cat,)
-            )
-            sources = [row[0] for row in await cursor.fetchall()]
-
-            # Top 5 by score
             cursor = await db.execute(
                 """SELECT id, source, source_lang, original_title, translated_title,
                           url, score, key_technologies, novelty_score, english_coverage
@@ -185,10 +216,9 @@ async def get_all_trends() -> list[dict]:
                    ORDER BY score DESC LIMIT 5""",
                 (cat,),
             )
-            rows = await cursor.fetchall()
-            latest_posts = []
-            for r in rows:
-                latest_posts.append({
+            post_rows = await cursor.fetchall()
+            latest_posts = [
+                {
                     "id": r[0],
                     "source": r[1],
                     "source_lang": r[2],
@@ -199,16 +229,20 @@ async def get_all_trends() -> list[dict]:
                     "key_technologies": json.loads(r[7]) if r[7] else [],
                     "novelty_score": r[8],
                     "english_coverage": bool(r[9]),
-                })
-
-            velocity = await get_velocity(cat)
+                }
+                for r in post_rows
+            ]
 
             trends.append({
                 "category": cat,
                 "post_count": post_count,
-                "velocity": velocity,
                 "sources": sources,
                 "latest_posts": latest_posts,
             })
 
-        return trends
+    # Velocity in a single separate connection
+    velocities = await get_velocity_batch(categories)
+    for trend in trends:
+        trend["velocity"] = velocities.get(trend["category"], 0.0)
+
+    return trends
