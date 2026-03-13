@@ -44,7 +44,7 @@ async def _localize_post(
         return title, body
 
 
-async def translate_posts(posts: list[dict], batch_size: int = 10) -> list[dict]:
+async def translate_posts(posts: list[dict], batch_size: int = 20) -> list[dict]:
     """
     Translate a list of posts. Each post dict is enriched in-place with
     'translated_title' and 'translated_body' keys.
@@ -90,7 +90,7 @@ async def translate_posts(posts: list[dict], batch_size: int = 10) -> list[dict]
                     post["translated_title"] = result[0]
                     post["translated_body"] = result[1]
 
-            await asyncio.sleep(0.5)  # Brief pause between batches
+
 
     return posts
 

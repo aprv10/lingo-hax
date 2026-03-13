@@ -5,7 +5,7 @@ import json
 from datetime import datetime, timezone
 
 USER_AGENT = "GlobalArbitrageBot/2.0 (https://github.com/global-arbitrage)"
-REQUEST_DELAY = 2  # seconds between requests per source
+
 
 
 def _make_id(url: str) -> str:
@@ -56,7 +56,7 @@ async def scrape_qiita(client: httpx.AsyncClient) -> list[dict]:
             "score": item.get("likes_count", 0),
             "scraped_at": _now_iso(),
         })
-    await asyncio.sleep(REQUEST_DELAY)
+
     return posts
 
 
@@ -81,7 +81,7 @@ async def scrape_v2ex(client: httpx.AsyncClient) -> list[dict]:
             "score": item.get("replies", 0),
             "scraped_at": _now_iso(),
         })
-    await asyncio.sleep(REQUEST_DELAY)
+
     return posts
 
 
@@ -110,7 +110,7 @@ async def scrape_reddit_programacion(client: httpx.AsyncClient) -> list[dict]:
             "score": item.get("score", 0),
             "scraped_at": _now_iso(),
         })
-    await asyncio.sleep(REQUEST_DELAY)
+
     return posts
 
 
@@ -145,7 +145,7 @@ async def scrape_habr(client: httpx.AsyncClient) -> list[dict]:
             "score": item.get("statistics", {}).get("score", 0),
             "scraped_at": _now_iso(),
         })
-    await asyncio.sleep(REQUEST_DELAY)
+
     return posts
 
 
@@ -172,7 +172,7 @@ async def scrape_zenn(client: httpx.AsyncClient) -> list[dict]:
             "score": item.get("liked_count", 0),
             "scraped_at": _now_iso(),
         })
-    await asyncio.sleep(REQUEST_DELAY)
+
     return posts
 
 
@@ -199,7 +199,7 @@ async def scrape_tabnews(client: httpx.AsyncClient) -> list[dict]:
             "score": item.get("tabcoins", 0),
             "scraped_at": _now_iso(),
         })
-    await asyncio.sleep(REQUEST_DELAY)
+
     return posts
 
 
@@ -249,7 +249,7 @@ async def scrape_velog(client: httpx.AsyncClient) -> list[dict]:
             "score": item.get("likes", 0),
             "scraped_at": _now_iso(),
         })
-    await asyncio.sleep(REQUEST_DELAY)
+
     return posts
 
 
