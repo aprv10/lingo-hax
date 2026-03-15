@@ -1,13 +1,27 @@
 "use client";
 
+import { useMemo } from "react";
 import { Masthead } from "@/components/Masthead";
-import { StatsTicker } from "@/components/StatsTicker";
+import { HowItWorks } from "@/components/HowItWorks";
+import { BuildThisWeek } from "@/components/BuildThisWeek";
 import { Briefing } from "@/components/Briefing";
 import { Footer } from "@/components/Footer";
+import { ChatWidget } from "@/components/ChatWidget";
 import { useGlobalTrends } from "@/hooks/useGlobalTrends";
 
 export default function Home() {
   const { data, isLoading, error } = useGlobalTrends();
+
+  /* Top 20 posts by novelty score, one per line: title | category | novelty | source */
+  const trendsContext = useMemo(() => {
+    if (!data) return "";
+    return data.trends
+      .flatMap((t) => t.posts.map((p) => ({ ...p, category: t.category })))
+      .sort((a, b) => (b.novelty_score ?? 0) - (a.novelty_score ?? 0))
+      .slice(0, 20)
+      .map((p) => `${p.translated_title || p.original_title} | ${p.category} | ${p.novelty_score ?? 0} | ${p.source}`)
+      .join("\n");
+  }, [data]);
 
   if (isLoading) {
     return (
@@ -53,9 +67,11 @@ export default function Home() {
   return (
     <>
       <Masthead />
-      <StatsTicker />
+      <HowItWorks />
+      <BuildThisWeek ideas={data.project_ideas ?? []} />
       <Briefing data={data} />
       <Footer />
+      <ChatWidget trendsContext={trendsContext} />
     </>
   );
 }
