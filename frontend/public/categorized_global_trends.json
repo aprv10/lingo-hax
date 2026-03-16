@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-15T16:05:42.336867+00:00",
-  "total_posts": 265,
+  "generated_at": "2026-03-16T17:11:49.375596+00:00",
+  "total_posts": 336,
   "trends": [
     {
       "category": "General Tech",
-      "post_count": 124,
+      "post_count": 151,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -15,22 +15,22 @@
         "tutorial"
       ],
       "sources": [
-        "Habr",
-        "Qiita",
+        "Velog",
         "Zenn",
         "V2EX",
-        "Reddit r/programacion",
         "TabNews",
-        "Velog"
+        "Qiita",
+        "Reddit r/programacion",
+        "Habr"
       ],
-      "hidden_gem_count": 57,
+      "hidden_gem_count": 58,
       "language_breakdown": {
-        "ja": 24,
+        "ja": 28,
         "zh": 16,
-        "es": 18,
+        "es": 24,
         "ru": 9,
-        "pt": 22,
-        "ko": 35
+        "pt": 27,
+        "ko": 47
       },
       "posts": [
         {
@@ -193,7 +193,7 @@
     },
     {
       "category": "SaaS",
-      "post_count": 7,
+      "post_count": 8,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -204,13 +204,14 @@
         "notion"
       ],
       "sources": [
+        "Zenn",
         "TabNews",
         "Velog",
         "Qiita"
       ],
       "hidden_gem_count": 1,
       "language_breakdown": {
-        "ja": 3,
+        "ja": 4,
         "pt": 1,
         "ko": 3
       },
@@ -245,6 +246,19 @@
             "payment processing",
             "stripe"
           ],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "95380b62913d10b1",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "コードを書くのをやめた。Claude Codeに月商300万のSaaSの全コードを書かせ、完全ソロ運用しているという話。",
+          "translated_title": "I Stopped Writing Code. How I Let Claude Code Build an Entire SaaS Generating $30K/Month in Revenue and Run It Completely Solo.",
+          "url": "https://zenn.dev/nnze/articles/e3f648e335a947",
+          "score": 286,
+          "scraped_at": "2026-03-16T17:10:45.324963+00:00",
+          "key_technologies": [],
           "novelty_score": 4.0,
           "english_coverage": true
         },
@@ -325,7 +339,7 @@
     },
     {
       "category": "AI & ML",
-      "post_count": 41,
+      "post_count": 53,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -336,22 +350,37 @@
         "github"
       ],
       "sources": [
-        "Qiita",
+        "Velog",
         "Zenn",
         "V2EX",
-        "Reddit r/programacion",
         "TabNews",
-        "Velog"
+        "Qiita",
+        "Reddit r/programacion",
+        "Habr"
       ],
       "hidden_gem_count": 8,
       "language_breakdown": {
-        "ja": 27,
-        "pt": 4,
-        "ko": 6,
+        "ja": 34,
+        "pt": 7,
+        "ko": 7,
         "zh": 3,
-        "es": 1
+        "es": 1,
+        "ru": 1
       },
       "posts": [
+        {
+          "id": "60071368180ceb22",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "論文解説】画像や動画の「あらゆる概念」をセグメンテーションするSAM 3の登場！",
+          "translated_title": "[Paper Explained] Introducing SAM 3: Segmenting 'Any Concept' in Images and Videos!",
+          "url": "https://qiita.com/sakai1250/items/a1f8af079fcf149f88df",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:46.663876+00:00",
+          "key_technologies": [],
+          "novelty_score": 8.0,
+          "english_coverage": true
+        },
         {
           "id": "113eebe7a755440f",
           "source": "Qiita",
@@ -418,6 +447,32 @@
           "english_coverage": true
         },
         {
+          "id": "803535e40b044bc6",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "音楽の生成・編集が可能な高性能ローカル音楽生成AI【ACE-Step-1.5】から音楽生成AIの仕組みを完全に理解する",
+          "translated_title": "Fully Understanding the Mechanisms of Music Generation AI Through ACE-Step-1.5: A High-Performance Local Music Generation AI Capable of Creating and Editing Music",
+          "url": "https://zenn.dev/asap/articles/6a717d7a68ec02",
+          "score": 17,
+          "scraped_at": "2026-03-16T17:10:45.324963+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "f5085c65d6fc6370",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "Pitch: Criei um Gateway de Pagamentos com IA que ja processou mais de 200k (sem tráfego pago)",
+          "translated_title": "Pitch: I Created an AI Payment Gateway that Has Already Processed Over 200k (Without Paid Traffic)",
+          "url": "https://www.tabnews.com.br/habil/criei-um-gateway-de-pagamentos-com-ia-que-ja-processou-mais-de-200k-sem-trafego-pago",
+          "score": 3,
+          "scraped_at": "2026-03-16T17:10:46.448246+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
           "id": "61b7f08ad68e1466",
           "source": "Qiita",
           "source_lang": "ja",
@@ -447,57 +502,12 @@
           ],
           "novelty_score": 6.0,
           "english_coverage": true
-        },
-        {
-          "id": "251d39ab1c65955c",
-          "source": "Zenn",
-          "source_lang": "ja",
-          "original_title": "Claude Codeを加速させる私の推しスキル・ツール・設定（Findyイベント登壇資料）",
-          "translated_title": "My Favorite Skills, Tools, and Settings to Supercharge Claude Code (Findy Event Presentation Materials)",
-          "url": "https://zenn.dev/ubie_dev/articles/claude-code-tips-findy-2026",
-          "score": 353,
-          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
-          "key_technologies": [
-            "claude"
-          ],
-          "novelty_score": 6.0,
-          "english_coverage": false
-        },
-        {
-          "id": "a67b98ee162043bf",
-          "source": "Zenn",
-          "source_lang": "ja",
-          "original_title": "Claude Codeで自分好みの朝刊が届く仕組みを作った",
-          "translated_title": "I Built a System to Deliver My Personalized Morning Newspaper with Claude Code",
-          "url": "https://zenn.dev/aoi_umigishi/articles/936073d8dd16e9",
-          "score": 97,
-          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
-          "key_technologies": [
-            "claude"
-          ],
-          "novelty_score": 6.0,
-          "english_coverage": false
-        },
-        {
-          "id": "66e682efb782dd44",
-          "source": "Zenn",
-          "source_lang": "ja",
-          "original_title": "Claude Codeで仕様駆動開発、tsumikiが良かった",
-          "translated_title": "Specification-Driven Development with Claude Code — tsumiki Was Great",
-          "url": "https://zenn.dev/hidechannu/articles/20260314-spec-driven-development-tsumiki",
-          "score": 84,
-          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
-          "key_technologies": [
-            "claude"
-          ],
-          "novelty_score": 6.0,
-          "english_coverage": false
         }
       ]
     },
     {
       "category": "Developer Tools",
-      "post_count": 32,
+      "post_count": 46,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -508,16 +518,16 @@
         "linux"
       ],
       "sources": [
+        "Zenn",
         "TabNews",
         "Velog",
-        "Qiita",
-        "Zenn"
+        "Qiita"
       ],
       "hidden_gem_count": 4,
       "language_breakdown": {
-        "ja": 19,
+        "ja": 31,
         "pt": 5,
-        "ko": 8
+        "ko": 10
       },
       "posts": [
         {
@@ -569,6 +579,19 @@
           ],
           "novelty_score": 8.0,
           "english_coverage": false
+        },
+        {
+          "id": "fed028c5c63a510c",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "Template Literal Types",
+          "translated_title": "Template Literal Types",
+          "url": "https://velog.io/@ehdgus8054/Template-Literal-Types",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:45.141767+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
         },
         {
           "id": "9514f7e6a8891ad7",
@@ -629,6 +652,19 @@
           "english_coverage": false
         },
         {
+          "id": "60fcff8f65e85a9c",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "VS Code 1.110 の「Agent Plugin」で Agent・Skills・Hooks・MCP をチームで共有しよう",
+          "translated_title": "Share Agents, Skills, Hooks, and MCP Across Your Team with VS Code 1.110's \"Agent Plugin\"",
+          "url": "https://qiita.com/leomarokun/items/0454e18fd8eb7392ad1c",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:46.663876+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
           "id": "96a7b6524f2f9102",
           "source": "Velog",
           "source_lang": "ko",
@@ -640,38 +676,12 @@
           "key_technologies": [],
           "novelty_score": 5.0,
           "english_coverage": true
-        },
-        {
-          "id": "7394868b37f60266",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "ROOT ファイルを uproot + matplotlib で解析する入門編 : 擬似データ生成からスペクトル解析・Gaussian fit・チャネル別比較・デバッグまで",
-          "translated_title": "Beginner's Guide to Analyzing ROOT Files with uproot + matplotlib: From Pseudo-Data Generation to Spectral Analysis, Gaussian Fitting, Channel Comparison, and Debugging",
-          "url": "https://qiita.com/yamadasuzaku/items/88509366a0ad27201a16",
-          "score": 0,
-          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
-          "key_technologies": [],
-          "novelty_score": 4.0,
-          "english_coverage": false
-        },
-        {
-          "id": "a931d5ae752dd2bb",
-          "source": "Velog",
-          "source_lang": "ko",
-          "original_title": "1.4 AOP(관점 지향 프로그래밍)",
-          "translated_title": "1.4 AOP (Aspect-Oriented Programming)",
-          "url": "https://velog.io/@keeff11/1.4-AOP관점-지향-프로그래밍",
-          "score": 0,
-          "scraped_at": "2026-03-15T16:05:18.379259+00:00",
-          "key_technologies": [],
-          "novelty_score": 4.0,
-          "english_coverage": true
         }
       ]
     },
     {
       "category": "Cybersecurity",
-      "post_count": 14,
+      "post_count": 18,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -679,17 +689,17 @@
         "security"
       ],
       "sources": [
-        "Habr",
-        "Qiita",
+        "Velog",
         "Zenn",
         "TabNews",
-        "Velog"
+        "Qiita",
+        "Habr"
       ],
-      "hidden_gem_count": 8,
+      "hidden_gem_count": 12,
       "language_breakdown": {
         "ja": 2,
         "ko": 3,
-        "ru": 8,
+        "ru": 12,
         "pt": 1
       },
       "posts": [
@@ -759,6 +769,32 @@
           "english_coverage": false
         },
         {
+          "id": "0e2f8ed8b470dfbe",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Настраиваем MTProto прокси с Fake TLS за 5 минут",
+          "translated_title": "Setting Up an MTProto Proxy with Fake TLS in 5 Minutes",
+          "url": "https://habr.com/ru/articles/1010942/",
+          "score": 8,
+          "scraped_at": "2026-03-16T17:10:45.391561+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": false
+        },
+        {
+          "id": "89bc83ee9ff22b7e",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Месседжер MAX следит за пользователями VPN? Реверс инжиниринг говорит — да (добавлено обновление)",
+          "translated_title": "Is MAX Messenger Tracking VPN Users? Reverse Engineering Says Yes (Update Added)",
+          "url": "https://habr.com/ru/articles/1006666/",
+          "score": 1055,
+          "scraped_at": "2026-03-16T17:10:45.391561+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": false
+        },
+        {
           "id": "5c19dc08667ae7a2",
           "source": "Qiita",
           "source_lang": "ja",
@@ -800,38 +836,12 @@
           "key_technologies": [],
           "novelty_score": 3.0,
           "english_coverage": false
-        },
-        {
-          "id": "29e8ece665caf118",
-          "source": "Habr",
-          "source_lang": "ru",
-          "original_title": "Лучшие виртуальные карты для оплаты зарубежных сервисов и расчётов за границей",
-          "translated_title": "Best Virtual Cards for Paying for Foreign Services and Transactions Abroad",
-          "url": "https://habr.com/ru/articles/1008104/",
-          "score": 67,
-          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
-          "key_technologies": [],
-          "novelty_score": 3.0,
-          "english_coverage": false
-        },
-        {
-          "id": "cbbdc5db888687cb",
-          "source": "Habr",
-          "source_lang": "ru",
-          "original_title": "Приложение Telega ограничила вход новых пользователей",
-          "translated_title": "Telega App Has Restricted New User Sign-ups",
-          "url": "https://habr.com/ru/articles/1010208/",
-          "score": 10,
-          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
-          "key_technologies": [],
-          "novelty_score": 3.0,
-          "english_coverage": false
         }
       ]
     },
     {
       "category": "Web Development",
-      "post_count": 19,
+      "post_count": 26,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -842,20 +852,20 @@
         "claude"
       ],
       "sources": [
-        "Habr",
-        "Qiita",
+        "Velog",
         "Zenn",
-        "Reddit r/programacion",
         "TabNews",
-        "Velog"
+        "Qiita",
+        "Reddit r/programacion",
+        "Habr"
       ],
       "hidden_gem_count": 3,
       "language_breakdown": {
-        "ja": 6,
+        "ja": 11,
         "es": 3,
         "ru": 1,
         "pt": 4,
-        "ko": 5
+        "ko": 7
       },
       "posts": [
         {
@@ -929,6 +939,32 @@
           "english_coverage": true
         },
         {
+          "id": "80a2d35236aa9f8c",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "Chromium(V8)のArray.prototype.flatを最大約5倍高速化した",
+          "translated_title": "Optimized Chromium (V8) Array.prototype.flat by up to ~5x",
+          "url": "https://zenn.dev/dinii/articles/675d47a6c21c83",
+          "score": 45,
+          "scraped_at": "2026-03-16T17:10:45.324963+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "2359649c0f5ffa84",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "2026年的SEO新趨勢：如何讓「關鍵字排名」在AI與搜尋引擎中同時優化",
+          "translated_title": "SEO Trends for 2026: How to Optimize 'Keyword Rankings' for Both AI and Search Engines",
+          "url": "https://velog.io/@yangtaiming710/2026年的SEO新趨勢：如何讓「關鍵字排名」在AI與搜尋引擎中同時優化",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:45.141767+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
           "id": "d34bd0a9cfd1a2a9",
           "source": "Qiita",
           "source_lang": "ja",
@@ -966,48 +1002,12 @@
           "key_technologies": [],
           "novelty_score": 4.0,
           "english_coverage": true
-        },
-        {
-          "id": "82360628222c4933",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "Claude Code だけで本番Webサービスを作った話 — 36時間・2.6億トークンの全記録",
-          "translated_title": "Building a Production Web Service with Claude Code Alone — Complete Record of 36 Hours and 260 Million Tokens",
-          "url": "https://qiita.com/yu-tasaki/items/105e40478c29d4a5292e",
-          "score": 0,
-          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
-          "key_technologies": [
-            "deployment",
-            "postgresql",
-            "claude",
-            "github"
-          ],
-          "novelty_score": 3.0,
-          "english_coverage": false
-        },
-        {
-          "id": "fa8ee10e6bc409e7",
-          "source": "Reddit r/programacion",
-          "source_lang": "es",
-          "original_title": "Fullstack con base en Infraestructura (Next.js / Laravel) - Busco nuevos retos / proyectos",
-          "translated_title": "Fullstack with Infrastructure Background (Next.js / Laravel) - Looking for New Challenges / Projects",
-          "url": "https://reddit.com/r/programacion/comments/1rr0v00/fullstack_con_base_en_infraestructura_nextjs/",
-          "score": 0,
-          "scraped_at": "2026-03-13T17:56:22.170028+00:00",
-          "key_technologies": [
-            "computer science",
-            "infrastructure",
-            "fullstack",
-            "community"
-          ],
-          "novelty_score": 3.0,
-          "english_coverage": false
         }
       ]
     },
     {
       "category": "DevOps & Cloud",
-      "post_count": 16,
+      "post_count": 18,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -1018,16 +1018,16 @@
         "networking"
       ],
       "sources": [
-        "Velog",
+        "Zenn",
         "Reddit r/programacion",
-        "Qiita",
-        "Zenn"
+        "Velog",
+        "Qiita"
       ],
       "hidden_gem_count": 1,
       "language_breakdown": {
-        "ja": 6,
+        "ja": 7,
         "es": 1,
-        "ko": 9
+        "ko": 10
       },
       "posts": [
         {
@@ -1070,6 +1070,19 @@
           "url": "https://velog.io/@ykgoesdumb/Service-Mesh-완전-정복-Istio-vs-Linkerd-비교-분석",
           "score": 0,
           "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "4381e945a32a3dc8",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "규모가 커지면서 Apache 대신 HAProxy를 쓰게 된 이유",
+          "translated_title": "Why We Switched from Apache to HAProxy as We Scaled",
+          "url": "https://velog.io/@pyg410/규모가-커지면서-Apache-대신-HAProxy를-쓰게-된-이유",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:45.141767+00:00",
           "key_technologies": [],
           "novelty_score": 6.0,
           "english_coverage": true
@@ -1158,25 +1171,12 @@
           ],
           "novelty_score": 3.0,
           "english_coverage": true
-        },
-        {
-          "id": "12994991d8292b7a",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "Oracle 実行計画",
-          "translated_title": "Oracle Execution Plan",
-          "url": "https://qiita.com/sampei_yuya/items/ff095ed2c477401b48b0",
-          "score": 0,
-          "scraped_at": "2026-03-15T14:31:15.539077+00:00",
-          "key_technologies": [],
-          "novelty_score": 3.0,
-          "english_coverage": true
         }
       ]
     },
     {
       "category": "Open Source",
-      "post_count": 8,
+      "post_count": 9,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
@@ -1187,18 +1187,20 @@
         "repository"
       ],
       "sources": [
-        "Habr",
-        "Qiita",
         "Zenn",
         "V2EX",
-        "Reddit r/programacion"
+        "TabNews",
+        "Qiita",
+        "Reddit r/programacion",
+        "Habr"
       ],
       "hidden_gem_count": 1,
       "language_breakdown": {
         "ja": 5,
         "zh": 1,
         "ru": 1,
-        "es": 1
+        "es": 1,
+        "pt": 1
       },
       "posts": [
         {
@@ -1275,6 +1277,19 @@
           "english_coverage": true
         },
         {
+          "id": "e1b9970f62b75784",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "Comunidade faz backup completo de 385 terabytes do acervo de jogos clássicos do Myrient",
+          "translated_title": "Community makes complete backup of 385 terabytes from Myrient's classic games collection",
+          "url": "https://www.tomshardware.com/video-games/retro-gaming/385tb-video-game-archive-saved-by-fans-myrient-has-been-100-percent-backed-up-and-validated-torrents-being-generated",
+          "score": 1,
+          "scraped_at": "2026-03-16T17:10:46.448246+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
           "id": "2e14799c4c05eb4e",
           "source": "Qiita",
           "source_lang": "ja",
@@ -1322,21 +1337,23 @@
     },
     {
       "category": "Mobile Development",
-      "post_count": 4,
+      "post_count": 6,
       "velocity": 9999,
       "momentum": "new",
       "key_technologies": [
         "dart"
       ],
       "sources": [
-        "Habr",
+        "Zenn",
+        "Velog",
         "Qiita",
-        "Zenn"
+        "Habr"
       ],
       "hidden_gem_count": 2,
       "language_breakdown": {
         "ru": 1,
-        "ja": 3
+        "ja": 3,
+        "ko": 2
       },
       "posts": [
         {
@@ -1355,6 +1372,19 @@
           "english_coverage": false
         },
         {
+          "id": "1d806b73e22755eb",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "How to Build a Fantasy Sports App in 2026 – Complete Development Guide",
+          "translated_title": "How to Build a Fantasy Sports App in 2026 – Complete Development Guide",
+          "url": "https://velog.io/@kuchoriya/How-to-Build-a-Fantasy-Sports-App-in-2026-Complete-Development-Guide",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:45.141767+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": true
+        },
+        {
           "id": "87adbdf3e218dba1",
           "source": "Zenn",
           "source_lang": "ja",
@@ -1363,6 +1393,19 @@
           "url": "https://zenn.dev/chooyan/articles/2eddee6e2f5eac",
           "score": 14,
           "scraped_at": "2026-03-15T14:31:13.492026+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "5ae95e2b3a360579",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "Dart 접근 지정자와 StatefulWidget 구조 이해하기",
+          "translated_title": "Understanding Dart Access Modifiers and StatefulWidget Structure",
+          "url": "https://velog.io/@pimento/Dart-접근-지정자와-StatefulWidget-구조-이해하기",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:45.141767+00:00",
           "key_technologies": [],
           "novelty_score": 4.0,
           "english_coverage": true
@@ -1394,99 +1437,128 @@
           "english_coverage": false
         }
       ]
+    },
+    {
+      "category": "Blockchain & Web3",
+      "post_count": 1,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [],
+      "sources": [
+        "Qiita"
+      ],
+      "hidden_gem_count": 1,
+      "language_breakdown": {
+        "ja": 1
+      },
+      "posts": [
+        {
+          "id": "1622d0952473cb23",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "A2Aプロトコル技術アップデート — 2026/03/16",
+          "translated_title": "A2A Protocol Technical Update — 2026/03/16",
+          "url": "https://qiita.com/Eclaw/items/6929ed01edf785cf3ca4",
+          "score": 0,
+          "scraped_at": "2026-03-16T17:10:46.663876+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": false
+        }
+      ]
     }
   ],
   "project_ideas": [
     {
       "title": "AI Code Assistant",
-      "one_liner": "A lightweight AI assistant that helps developers write and debug code in real-time.",
+      "one_liner": "A tool that helps users write AI-friendly code with best practices.",
       "category": "Developer Tools",
       "difficulty": "Medium",
       "source_topics": [
-        "Why the Claude Code Tutorial Video Resonates. It Looks Like a Setup Manual, But It's Actually About How Your Work Process Will Change",
-        "Most Things Can Now Be Done Just by Using Claude Code's Agent Team"
+        "From \"Easy for Humans to Write\" to \"Easy for AI to Handle and Hard to Break\" Architecture",
+        "Why the Claude Code Tutorial Video Resonates. It Looks Like a Setup Manual, But It's Actually About How Your Work Process Will Change"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     },
     {
-      "title": "Multi-Tenant K8s Cluster Simulator",
-      "one_liner": "A simulator for testing and understanding multi-tenant Kubernetes clusters on ARM64.",
+      "title": "ARM64 K8s Cluster Dashboard",
+      "one_liner": "A user-friendly dashboard for managing multi-tenant K8s clusters on ARM64.",
       "category": "DevOps & Cloud",
       "difficulty": "Hard",
       "source_topics": [
         "[Project] Multi-Tenant K8s Cluster on ARM64 - (14) Network Flow"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     },
     {
-      "title": "Dashboard Conversion Optimizer",
-      "one_liner": "A tool that analyzes and suggests improvements for dashboard landing pages to increase conversion rates.",
+      "title": "SaaS Landing Page Optimizer",
+      "one_liner": "A tool that analyzes and suggests improvements for SaaS landing pages to increase conversion rates.",
       "category": "SaaS",
       "difficulty": "Medium",
       "source_topics": [
         "Why Your Dashboard Landing Page Isn't Converting (And How to Fix It)"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     },
     {
       "title": "Neovim Build Helper",
-      "one_liner": "A utility to resolve common build errors when setting up Neovim on macOS.",
+      "one_liner": "A tool that helps users resolve common build errors when installing Neovim on macOS.",
       "category": "Developer Tools",
       "difficulty": "Easy",
       "source_topics": [
         "Header File Not Found Error When Building Neovim on macOS"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     },
     {
-      "title": "Static Props Fetcher",
-      "one_liner": "A debugging tool for fetch failures in getStaticProps and getServerSideProps in Next.js.",
+      "title": "Next.js Fetch Helper",
+      "one_liner": "A library that simplifies fetching data in Next.js for getStaticProps and getServerSideProps.",
       "category": "Web Development",
       "difficulty": "Easy",
       "source_topics": [
         "1. Fetch fails in getStaticProps/getServerSideProps"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     },
     {
       "title": "pnpm Update Manager",
-      "one_liner": "A tool to manage and prevent pnpm self-update from being blocked by minimumReleaseAge.",
+      "one_liner": "A tool that manages pnpm self-updates and respects minimumReleaseAge settings.",
       "category": "Developer Tools",
-      "difficulty": "Easy",
+      "difficulty": "Medium",
       "source_topics": [
         "Preventing pnpm self-update from being blocked by minimumReleaseAge"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     },
     {
-      "title": "AI-Powered Biology Learning",
-      "one_liner": "An interactive learning platform that uses AI to teach high school biology concepts.",
+      "title": "AI-Powered E2E Testing",
+      "one_liner": "A framework that combines AI agents with end-to-end testing for comprehensive test automation.",
+      "category": "Cybersecurity",
+      "difficulty": "Hard",
+      "source_topics": [
+        "Trying Out End-to-End Testing to Vulnerability Assessment in One Go with Playwright + OWASP ZAP + Claude Code"
+      ],
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
+    },
+    {
+      "title": "SAM 3 Demo App",
+      "one_liner": "A demo application showcasing the capabilities of SAM 3 for segmenting any concept in images and videos.",
       "category": "AI & ML",
       "difficulty": "Medium",
       "source_topics": [
-        "High School Biology and Machine Learning"
+        "[Paper Explained] Introducing SAM 3: Segmenting 'Any Concept' in Images and Videos!"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     },
     {
-      "title": "Physics AI Explorer",
-      "one_liner": "An AI-driven tool to explore and understand high school physics concepts.",
-      "category": "AI & ML",
-      "difficulty": "Medium",
-      "source_topics": [
-        "Investigating High School Physics and Machine Learning with Generative AI"
-      ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
-    },
-    {
-      "title": "Knowledge Storage Reinventor",
-      "one_liner": "A tool that helps machines and humans store knowledge more efficiently, inspired by W3C's new group.",
+      "title": "AI-Powered Knowledge Storage",
+      "one_liner": "A platform that leverages AI to reinvent how machines and humans store and retrieve knowledge.",
       "category": "Web Development",
       "difficulty": "Hard",
       "source_topics": [
         "The W3C has opened a group to reinvent how machines (and humans) store knowledge — and you can participate"
       ],
-      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+      "generated_at": "2026-03-16T17:11:49.346728+00:00"
     }
   ]
 }
