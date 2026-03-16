@@ -3,7 +3,7 @@
 Tech trends emerge in Japanese, Chinese, Russian, Korean, and Brazilian communities hours — sometimes days — before they surface in English. Global Arbitrage monitors 7 non-English tech communities in real time, translates every post, scores it for novelty, and surfaces what the English internet hasn't discovered yet.
 
 <!-- INSERT PRODUCT SCREENSHOT OR DEMO GIF HERE -->
-!(./assets/Lingo_Hax.gif)
+![demo GIF](assets/Lingo_Hax.gif)
 
 ---
 
