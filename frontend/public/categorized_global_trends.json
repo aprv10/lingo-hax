@@ -1,378 +1,1492 @@
 {
-  "generated_at": "2026-03-12T02:00:00Z",
-  "total_posts": 24,
+  "generated_at": "2026-03-15T16:05:42.336867+00:00",
+  "total_posts": 265,
   "trends": [
     {
-      "category": "AI & Machine Learning",
-      "post_count": 6,
-      "velocity": 340,
-      "momentum": "rising",
-      "key_technologies": ["Claude Code", "Codex", "RLHF", "MCP", "LLM Agents"],
-      "sources": ["Qiita", "V2EX", "r/programacion"],
-      "hidden_gem_count": 4,
-      "language_breakdown": { "ja": 3, "zh": 3, "es": 2 },
-      "posts": [
-        {
-          "id": "ai-001",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "AIが「できるのにできない」と擬態する、存在の不自然さ",
-          "translated_title": "The Unnatural Existence of AI Pretending It \"Can't Do What It Can\"",
-          "url": "https://qiita.com/RiriEnu-Lab/items/787d2e48df36619f898f",
-          "score": 142,
-          "scraped_at": "2026-03-12T01:30:00Z",
-          "key_technologies": ["RLHF", "LLM"],
-          "novelty_score": 8,
-          "english_coverage": false
-        },
-        {
-          "id": "ai-002",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "Claude Codeを「もう一人の開発者」にする — agents / skills / hooks を駆使した自動化パイプライン構築記",
-          "translated_title": "Making Claude Code Your \"Second Developer\" — Building an Automated Pipeline with agents / skills / hooks",
-          "url": "https://qiita.com/sugo_mzk/items/f243360253b511298f4d",
-          "score": 98,
-          "scraped_at": "2026-03-12T01:15:00Z",
-          "key_technologies": ["Claude Code", "MCP", "Agents"],
-          "novelty_score": 9,
-          "english_coverage": false
-        },
-        {
-          "id": "ai-003",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "公司开始裁员了, 因为 AI 太好用了",
-          "translated_title": "The Company Has Started Layoffs Because AI Is Too Effective",
-          "url": "https://www.v2ex.com/t/1197294",
-          "score": 256,
-          "scraped_at": "2026-03-12T00:45:00Z",
-          "key_technologies": ["AI Automation", "LLM"],
-          "novelty_score": 7,
-          "english_coverage": false
-        },
-        {
-          "id": "ai-004",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "codex+各种 skill，跑通了自动写需求+自动调试+自动修 bug+自动部署，很担心",
-          "translated_title": "Codex + various skills, successfully automated requirement writing + auto debugging + auto bug fixing + auto deployment, feeling very worried",
-          "url": "https://www.v2ex.com/t/1197259",
-          "score": 189,
-          "scraped_at": "2026-03-11T23:30:00Z",
-          "key_technologies": ["Codex", "Jenkins", "GitLab", "Grafana"],
-          "novelty_score": 9,
-          "english_coverage": false
-        },
-        {
-          "id": "ai-005",
-          "source": "r/programacion",
-          "source_lang": "es",
-          "original_title": "Los programadores profesional perdimos la batalla ante la IA",
-          "translated_title": "We professional programmers lost the battle against AI",
-          "url": "https://reddit.com/r/programacion/comments/1rqbfm5",
-          "score": 67,
-          "scraped_at": "2026-03-11T22:00:00Z",
-          "key_technologies": ["AI"],
-          "novelty_score": 4,
-          "english_coverage": true
-        },
-        {
-          "id": "ai-006",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "为什么这次\"龙虾🦞\"能这么火？？各方面感觉都在往里面拱火儿。",
-          "translated_title": "Why is this \"lobster\" so hyped this time?? It feels like everyone's fanning the flames from all directions.",
-          "url": "https://www.v2ex.com/t/1197227",
-          "score": 134,
-          "scraped_at": "2026-03-11T21:00:00Z",
-          "key_technologies": ["MCP", "LLM Agents", "Cloud Deployment"],
-          "novelty_score": 6,
-          "english_coverage": false
-        }
-      ]
-    },
-    {
-      "category": "Developer Tools & Infrastructure",
-      "post_count": 7,
-      "velocity": 180,
-      "momentum": "rising",
-      "key_technologies": ["MCP", "GitHub Copilot", "MapLibre", "Steep", "RBS", "1Password CLI"],
-      "sources": ["Qiita", "V2EX", "r/programacion"],
-      "hidden_gem_count": 3,
-      "language_breakdown": { "ja": 5, "zh": 1, "es": 1 },
-      "posts": [
-        {
-          "id": "dev-001",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "AIエージェントにAPIキーが丸見えな件、1Password CLIで解決した",
-          "translated_title": "Your API Keys Are Completely Exposed to AI Agents—Here's How I Fixed It with 1Password CLI",
-          "url": "https://qiita.com/Takao-Mochizuki/items/b1de0707a58ba1755389",
-          "score": 215,
-          "scraped_at": "2026-03-12T01:45:00Z",
-          "key_technologies": ["1Password CLI", "AI Agents", "Security"],
-          "novelty_score": 9,
-          "english_coverage": false
-        },
-        {
-          "id": "dev-002",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "GitHub Copilot エージェントモード × MCP × Microsoft Learn で技術的調査をする",
-          "translated_title": "Technical Research with GitHub Copilot Agent Mode × MCP × Microsoft Learn",
-          "url": "https://qiita.com/komiyasa/items/6f014ed92b70dbf3247e",
-          "score": 156,
-          "scraped_at": "2026-03-12T01:00:00Z",
-          "key_technologies": ["GitHub Copilot", "MCP", "Microsoft Learn"],
-          "novelty_score": 8,
-          "english_coverage": false
-        },
-        {
-          "id": "dev-003",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "【Ruby】Steep が include した Math のメソッドを認識してくれない",
-          "translated_title": "[Ruby] Steep doesn't recognize Math module methods after include",
-          "url": "https://qiita.com/scivola/items/2eba2947e3325ae43e10",
-          "score": 34,
-          "scraped_at": "2026-03-12T00:30:00Z",
-          "key_technologies": ["Ruby", "Steep", "RBS"],
-          "novelty_score": 5,
-          "english_coverage": false
-        },
-        {
-          "id": "dev-004",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "「Makefile:2: *** missing separator. Stop.」の解決方法",
-          "translated_title": "How to Fix \"Makefile:2: *** missing separator. Stop.\"",
-          "url": "https://qiita.com/keikeigo/items/18f36ba037ca92c35cab",
-          "score": 12,
-          "scraped_at": "2026-03-11T23:00:00Z",
-          "key_technologies": ["Make", "Build Tools"],
-          "novelty_score": 2,
-          "english_coverage": true
-        },
-        {
-          "id": "dev-005",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "MapLibre GL JSで国道番号をきれいに表示する",
-          "translated_title": "Displaying National Route Numbers Beautifully with MapLibre GL JS",
-          "url": "https://qiita.com/k_hirofumi/items/9f04086860ada14cc382",
-          "score": 78,
-          "scraped_at": "2026-03-11T22:30:00Z",
-          "key_technologies": ["MapLibre GL JS", "GIS"],
-          "novelty_score": 7,
-          "english_coverage": false
-        },
-        {
-          "id": "dev-006",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "ARC 浏览器大家还在用么？有啥替换的对象",
-          "translated_title": "Is everyone still using the ARC browser? Any alternatives?",
-          "url": "https://www.v2ex.com/t/1197269",
-          "score": 45,
-          "scraped_at": "2026-03-11T21:30:00Z",
-          "key_technologies": ["ARC Browser", "Zen Browser", "Firefox"],
-          "novelty_score": 3,
-          "english_coverage": true
-        },
-        {
-          "id": "dev-007",
-          "source": "r/programacion",
-          "source_lang": "es",
-          "original_title": "¿Síndrome del impostor o realidad?",
-          "translated_title": "Impostor syndrome or reality?",
-          "url": "https://reddit.com/r/programacion/comments/1rpdock",
-          "score": 89,
-          "scraped_at": "2026-03-11T20:00:00Z",
-          "key_technologies": ["AI-assisted Development"],
-          "novelty_score": 4,
-          "english_coverage": true
-        }
-      ]
-    },
-    {
-      "category": "Consumer Tech",
-      "post_count": 8,
-      "velocity": 45,
-      "momentum": "falling",
-      "key_technologies": ["WeChat Mini Programs", "YouTube", "Electric Vehicles", "Mobile Gaming"],
-      "sources": ["Qiita", "V2EX", "r/programacion"],
-      "hidden_gem_count": 2,
-      "language_breakdown": { "ja": 1, "zh": 5, "es": 4 },
-      "posts": [
-        {
-          "id": "con-001",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "女儿出生了，写了一个记录孩子喝奶的小程序",
-          "translated_title": "My daughter was born, so I created a mini app to track her feeding",
-          "url": "https://www.v2ex.com/t/1197303",
-          "score": 167,
-          "scraped_at": "2026-03-12T01:20:00Z",
-          "key_technologies": ["WeChat Mini Programs"],
-          "novelty_score": 6,
-          "english_coverage": false
-        },
-        {
-          "id": "con-002",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "macmini m4 丐版的价格是疯了么",
-          "translated_title": "Has the price of the base model Mac mini M4 gone crazy?",
-          "url": "https://www.v2ex.com/t/1197299",
-          "score": 98,
-          "scraped_at": "2026-03-12T00:50:00Z",
-          "key_technologies": ["Mac Mini M4", "OpenClaw"],
-          "novelty_score": 5,
-          "english_coverage": true
-        },
-        {
-          "id": "con-003",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "说说你最爱的游戏是什么？",
-          "translated_title": "What's your favorite game?",
-          "url": "https://www.v2ex.com/t/1197352",
-          "score": 34,
-          "scraped_at": "2026-03-11T23:40:00Z",
-          "key_technologies": ["Mobile Gaming"],
-          "novelty_score": 2,
-          "english_coverage": true
-        },
-        {
-          "id": "con-004",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "帮我分析要不要买车？",
-          "translated_title": "Should I buy a car? Help me analyze.",
-          "url": "https://www.v2ex.com/t/1197420",
-          "score": 76,
-          "scraped_at": "2026-03-11T22:15:00Z",
-          "key_technologies": ["Electric Vehicles", "BYD"],
-          "novelty_score": 3,
-          "english_coverage": false
-        },
-        {
-          "id": "con-005",
-          "source": "r/programacion",
-          "source_lang": "es",
-          "original_title": "¿Cuando vamos a crear un nuevo termino despectivo para las apps creadas con IA?",
-          "translated_title": "When are we going to create a new derogatory term for AI-created apps?",
-          "url": "https://reddit.com/r/programacion/comments/1rpci2e",
-          "score": 112,
-          "scraped_at": "2026-03-11T21:45:00Z",
-          "key_technologies": ["AI-Generated Apps"],
-          "novelty_score": 7,
-          "english_coverage": false
-        },
-        {
-          "id": "con-006",
-          "source": "r/programacion",
-          "source_lang": "es",
-          "original_title": "Las animaciones y efectos estan arruinando el desarrollo de software?",
-          "translated_title": "Are animations and effects ruining software development?",
-          "url": "https://reddit.com/r/programacion/comments/1rqcnqw",
-          "score": 56,
-          "scraped_at": "2026-03-11T20:30:00Z",
-          "key_technologies": ["CSS Animations", "WebGL"],
-          "novelty_score": 4,
-          "english_coverage": true
-        },
-        {
-          "id": "con-007",
-          "source": "Qiita",
-          "source_lang": "ja",
-          "original_title": "サブスクリプションはもうやめよう：YouTube動画を無料ダウンローダーでダウンロードする究極のガイド",
-          "translated_title": "Stop Subscribing: The Ultimate Guide to Downloading YouTube Videos with a Free Downloader",
-          "url": "https://qiita.com/forcrypto2024/items/d4f028f2799610ac5042",
-          "score": 23,
-          "scraped_at": "2026-03-11T19:00:00Z",
-          "key_technologies": ["YouTube"],
-          "novelty_score": 2,
-          "english_coverage": true
-        },
-        {
-          "id": "con-008",
-          "source": "r/programacion",
-          "source_lang": "es",
-          "original_title": "Notebook para programación, ¿Que me conviene?",
-          "translated_title": "Laptop for programming, which one suits me best?",
-          "url": "https://reddit.com/r/programacion/comments/1rpfsqq",
-          "score": 31,
-          "scraped_at": "2026-03-11T18:00:00Z",
-          "key_technologies": [],
-          "novelty_score": 1,
-          "english_coverage": true
-        }
-      ]
-    },
-    {
-      "category": "SaaS & Enterprise",
-      "post_count": 1,
-      "velocity": "Infinity",
+      "category": "General Tech",
+      "post_count": 124,
+      "velocity": 9999,
       "momentum": "new",
-      "key_technologies": ["Unstructured Data", "Enterprise AI"],
-      "sources": ["Qiita"],
-      "hidden_gem_count": 1,
-      "language_breakdown": { "ja": 1 },
+      "key_technologies": [
+        "software",
+        "programming",
+        "technology",
+        "python",
+        "tutorial"
+      ],
+      "sources": [
+        "Habr",
+        "Qiita",
+        "Zenn",
+        "V2EX",
+        "Reddit r/programacion",
+        "TabNews",
+        "Velog"
+      ],
+      "hidden_gem_count": 57,
+      "language_breakdown": {
+        "ja": 24,
+        "zh": 16,
+        "es": 18,
+        "ru": 9,
+        "pt": 22,
+        "ko": 35
+      },
       "posts": [
         {
-          "id": "saas-001",
+          "id": "50661c7c8b037514",
           "source": "Qiita",
           "source_lang": "ja",
-          "original_title": "Enterprise Growth Powered by Unstructured Data Management Platform",
-          "translated_title": "Enterprise Growth Powered by Unstructured Data Management Platform",
-          "url": "https://qiita.com/danielcarterus/items/aa42ecc6973563b4c549",
-          "score": 45,
-          "scraped_at": "2026-03-12T00:15:00Z",
-          "key_technologies": ["Unstructured Data", "Enterprise AI", "Data Management"],
-          "novelty_score": 6,
-          "english_coverage": false
-        }
-      ]
-    },
-    {
-      "category": "Other",
-      "post_count": 2,
-      "velocity": 10,
-      "momentum": "falling",
-      "key_technologies": ["Cybersecurity", "Finance"],
-      "sources": ["V2EX", "r/programacion"],
-      "hidden_gem_count": 0,
-      "language_breakdown": { "zh": 1, "es": 1 },
-      "posts": [
-        {
-          "id": "oth-001",
-          "source": "V2EX",
-          "source_lang": "zh",
-          "original_title": "弟弟刚毕业就一直躺在家里，在最有冲劲的年纪躺平宅家玩游戏",
-          "translated_title": "My brother has been lying around at home ever since graduation playing games at the age when he should be most ambitious",
-          "url": "https://www.v2ex.com/t/1197295",
-          "score": 203,
-          "scraped_at": "2026-03-11T23:15:00Z",
-          "key_technologies": [],
-          "novelty_score": 2,
+          "original_title": "「人間が書きやすい」から「AIが扱いやすく壊しにくい」アーキテクチャへ",
+          "translated_title": "From \"Easy for Humans to Write\" to \"Easy for AI to Handle and Hard to Break\" Architecture",
+          "url": "https://qiita.com/kouki_miura/items/46ecf481e2f1d971285d",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "architecture",
+            "programming",
+            "technology",
+            "chatgpt"
+          ],
+          "novelty_score": 10.0,
           "english_coverage": true
         },
         {
-          "id": "oth-002",
-          "source": "r/programacion",
+          "id": "636f57314c7c34d1",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Claude Code入門動画が刺さる理由。設定マニュアルの話に見えて、実は「仕事の進め方」が変わる話だった",
+          "translated_title": "Why the Claude Code Tutorial Video Resonates. It Looks Like a Setup Manual, But It's Actually About How Your Work Process Will Change",
+          "url": "https://qiita.com/taketsuyo/items/d3e389a0bbfd1ce58643",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "tutorial",
+            "chatgpt",
+            "claude",
+            "go"
+          ],
+          "novelty_score": 9.0,
+          "english_coverage": true
+        },
+        {
+          "id": "d46dbe198b17de90",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "2026年、Vibe Coding × AIエージェント × AIoTが全部つながった件",
+          "translated_title": "2026: When Vibe Coding × AI Agents × AIoT All Connected",
+          "url": "https://qiita.com/AI-SKILL-LAB/items/5a3700308d643099d1f7",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "coding",
+            "iot"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": true
+        },
+        {
+          "id": "a82e25fcb9d0fab1",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Как ТСПУ ловит VLESS в 2026 и почему XHTTP — следующий шаг",
+          "translated_title": "How DPI Catches VLESS in 2026 and Why XHTTP Is the Next Step",
+          "url": "https://habr.com/ru/articles/1009542/",
+          "score": 164,
+          "scraped_at": "2026-03-13T17:56:22.202048+00:00",
+          "key_technologies": [
+            "architecture",
+            "algorithm",
+            "server"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": true
+        },
+        {
+          "id": "4fa462af41b7c2a1",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "MySQLが好きな私が、今はPostgreSQLを勧めたい理由",
+          "translated_title": "Why I, a MySQL Lover, Now Recommend PostgreSQL",
+          "url": "https://zenn.dev/catatsuy/articles/f3721135c6f8f6",
+          "score": 239,
+          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
+          "key_technologies": [
+            "postgresql",
+            "mysql"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": false
+        },
+        {
+          "id": "d724cf081fc99c4d",
+          "source": "Reddit r/programacion",
           "source_lang": "es",
           "original_title": "Finanzas + Ciberseguridad?",
           "translated_title": "Finance + Cybersecurity?",
-          "url": "https://reddit.com/r/programacion/comments/1rpl07c",
-          "score": 28,
-          "scraped_at": "2026-03-11T20:45:00Z",
-          "key_technologies": ["Cybersecurity", "Finance"],
-          "novelty_score": 3,
+          "url": "https://reddit.com/r/programacion/comments/1rpl07c/finanzas_ciberseguridad/",
+          "score": 8,
+          "scraped_at": "2026-03-13T17:56:22.170028+00:00",
+          "key_technologies": [
+            "cybersecurity",
+            "go"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "a51eba5732d5ae19",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "Hunter Alpha: O Modelo de IA de 1 Trilhão de Parâmetros que Redefine Agentes Autônomos",
+          "translated_title": "Hunter Alpha: The 1 Trillion Parameter AI Model Redefining Autonomous Agents",
+          "url": "https://www.tabnews.com.br/N0rd1k0Agent/hunter-alpha-o-modelo-de-ia-de-1-trilhao-de-parametros-que-redefine-agentes-autonomos",
+          "score": 1,
+          "scraped_at": "2026-03-13T17:56:23.260692+00:00",
+          "key_technologies": [
+            "autonomous",
+            "ai model"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        },
+        {
+          "id": "4b179438c3c2882b",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "SUSE Harvester の 3 種類のデータストアでディスク I/O ベンチマークを比較する",
+          "translated_title": "Comparing Disk I/O Benchmarks Across Three Types of Datastores in SUSE Harvester",
+          "url": "https://qiita.com/flathill/items/a177caec47a0eaf7d28f",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": false
+        },
+        {
+          "id": "00cb626a06185b7a",
+          "source": "V2EX",
+          "source_lang": "zh",
+          "original_title": "又到周五了，大家一般周五晚上怎么安排？",
+          "translated_title": "It's Friday again, what do you usually do on Friday evenings?",
+          "url": "https://www.v2ex.com/t/1197884",
+          "score": 141,
+          "scraped_at": "2026-03-13T17:56:22.641395+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": false
+        },
+        {
+          "id": "72bf8f328dba6310",
+          "source": "V2EX",
+          "source_lang": "zh",
+          "original_title": "去父留子，女性单身生育的视频我最近一周刷到 7-8 个视频了，你们怎么看",
+          "translated_title": "'Keep the child, ditch the father' – I've seen 7-8 videos about single women choosing motherhood in the past week. What do you guys think?",
+          "url": "https://www.v2ex.com/t/1197880",
+          "score": 125,
+          "scraped_at": "2026-03-13T17:56:22.641395+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": false
+        }
+      ]
+    },
+    {
+      "category": "SaaS",
+      "post_count": 7,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "integration",
+        "saas",
+        "architecture",
+        "erp",
+        "notion"
+      ],
+      "sources": [
+        "TabNews",
+        "Velog",
+        "Qiita"
+      ],
+      "hidden_gem_count": 1,
+      "language_breakdown": {
+        "ja": 3,
+        "pt": 1,
+        "ko": 3
+      },
+      "posts": [
+        {
+          "id": "be1bfd662c9dc7d8",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Why Your Dashboard Landing Page Isn't Converting (And How to Fix It)",
+          "translated_title": "Why Your Dashboard Landing Page Isn't Converting (And How to Fix It)",
+          "url": "https://qiita.com/janemayfield/items/1398fc51cfae317aa771",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "architecture",
+            "integration",
+            "saas"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": false
+        },
+        {
+          "id": "3566c83be955ee8a",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "Buy Stripe Accounts Verified – Fast & Secure Service",
+          "translated_title": "Buy Stripe Accounts Verified – Fast & Secure Service",
+          "url": "https://velog.io/@85416/Buy-Stripe-Accounts-Verified-Fast-Secure-Service",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:21.451935+00:00",
+          "key_technologies": [
+            "payment processing",
+            "stripe"
+          ],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "9a9a24485415fd6e",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "AI時代のヘルスケア・健康食品企業に必要なERPとは何か――営業・受注・在庫・会計をつなぎ直すNetSuite",
+          "translated_title": "What ERP Do Healthcare and Nutraceutical Companies Need in the AI Era? NetSuite Reconnects Sales, Orders, Inventory, and Accounting",
+          "url": "https://qiita.com/Fukumiya/items/75b0479b4edf0f596f3e",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "erp"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "e8f060de453b9c64",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "Pitch: Como eu criei um SaaS para \"Salvar\" o Vibe Code.",
+          "translated_title": "Pitch: How I Created a SaaS to \"Save\" Vibe Code.",
+          "url": "https://www.tabnews.com.br/sideantunes/pitch-como-eu-criei-um-saas-para-salvar-o-vibe-code",
+          "score": 4,
+          "scraped_at": "2026-03-13T17:56:23.260692+00:00",
+          "key_technologies": [
+            "saas"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "42a9efcdbe1406e3",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "Smart TV Market Trends: AI, Voice Control, and Smart Home Integration",
+          "translated_title": "Smart TV Market Trends: AI, Voice Control, and Smart Home Integration",
+          "url": "https://velog.io/@rushistellar/Smart-TV-Market-Trends-AI-Voice-Control-and-Smart-Home-Integration-rzfe1eeb",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:21.451935+00:00",
+          "key_technologies": [
+            "integration"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "c074c07023626e46",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "다시 작성...",
+          "translated_title": "Rewriting...",
+          "url": "https://velog.io/@kooks-dev/다시-작성",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:21.451935+00:00",
+          "key_technologies": [
+            "notion"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "0404d7437d18a154",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "EClaw v1.0.47 リリースノート",
+          "translated_title": "EClaw v1.0.47 Release Notes",
+          "url": "https://qiita.com/EClaw_official/items/e30d69a666e36a7351b6",
+          "score": 0,
+          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
           "english_coverage": true
         }
       ]
+    },
+    {
+      "category": "AI & ML",
+      "post_count": 41,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "claude",
+        "repository",
+        "documentation",
+        "integration",
+        "github"
+      ],
+      "sources": [
+        "Qiita",
+        "Zenn",
+        "V2EX",
+        "Reddit r/programacion",
+        "TabNews",
+        "Velog"
+      ],
+      "hidden_gem_count": 8,
+      "language_breakdown": {
+        "ja": 27,
+        "pt": 4,
+        "ko": 6,
+        "zh": 3,
+        "es": 1
+      },
+      "posts": [
+        {
+          "id": "113eebe7a755440f",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "高校生物と機械学習",
+          "translated_title": "High School Biology and Machine Learning",
+          "url": "https://qiita.com/ieie55550000/items/3a5efe72f69a651470d8",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:15.539077+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "0d9c8c7eb543bdc9",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "生成AIで調べる高校物理機械学習",
+          "translated_title": "Investigating High School Physics and Machine Learning with Generative AI",
+          "url": "https://qiita.com/ieie55550000/items/15cd5b9a90afdec64227",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:15.539077+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "89a0e538d66df840",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "Claude Codeのエージェントチームを使うだけで大抵のことが出来るようになった",
+          "translated_title": "Most Things Can Now Be Done Just by Using Claude Code's Agent Team",
+          "url": "https://zenn.dev/n314/articles/e06f189f093902",
+          "score": 45,
+          "scraped_at": "2026-03-15T14:31:13.492026+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "4250d943baea52a9",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "DSPy로 metric/optimizer 해보기",
+          "translated_title": "Exploring Metrics and Optimizers with DSPy",
+          "url": "https://velog.io/@jb2002a/DSPy로-metricoptimizer-해보기",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "cf2d4576812c7622",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "Empreendedor de tecnologia da Austrália utiliza IA para desenvolver vacina experimental contra câncer para sua cadela",
+          "translated_title": "Tech entrepreneur from Australia uses AI to develop experimental cancer vaccine for his dog",
+          "url": "https://www.theaustralian.com.au/business/technology/tech-boss-uses-ai-and-chatgpt-to-create-cancer-vaccine-for-his-dying-dog/news-story/292a21bcbe93efa17810bfcfcdfadbf7",
+          "score": 1,
+          "scraped_at": "2026-03-15T16:05:18.491874+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "61b7f08ad68e1466",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "5時間止まっていたClaude Codeを24時間動かし続ける3つの設定ファイル",
+          "translated_title": "3 Configuration Files That Keep Claude Code Running for 24 Hours After It Stopped for 5 Hours",
+          "url": "https://qiita.com/yurukusa/items/611b939c4e1871ded117",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "claude"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        },
+        {
+          "id": "c72070bb952ced5d",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Agent Skillsで作業を効率化しよう！～文書作成編～",
+          "translated_title": "Streamline Your Work with Agent Skills! ~Document Creation Edition~",
+          "url": "https://qiita.com/Hurry-Co-Jp/items/510aec828d340bba3c67",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "documentation",
+            "claude"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "251d39ab1c65955c",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "Claude Codeを加速させる私の推しスキル・ツール・設定（Findyイベント登壇資料）",
+          "translated_title": "My Favorite Skills, Tools, and Settings to Supercharge Claude Code (Findy Event Presentation Materials)",
+          "url": "https://zenn.dev/ubie_dev/articles/claude-code-tips-findy-2026",
+          "score": 353,
+          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
+          "key_technologies": [
+            "claude"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        },
+        {
+          "id": "a67b98ee162043bf",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "Claude Codeで自分好みの朝刊が届く仕組みを作った",
+          "translated_title": "I Built a System to Deliver My Personalized Morning Newspaper with Claude Code",
+          "url": "https://zenn.dev/aoi_umigishi/articles/936073d8dd16e9",
+          "score": 97,
+          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
+          "key_technologies": [
+            "claude"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        },
+        {
+          "id": "66e682efb782dd44",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "Claude Codeで仕様駆動開発、tsumikiが良かった",
+          "translated_title": "Specification-Driven Development with Claude Code — tsumiki Was Great",
+          "url": "https://zenn.dev/hidechannu/articles/20260314-spec-driven-development-tsumiki",
+          "score": 84,
+          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
+          "key_technologies": [
+            "claude"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        }
+      ]
+    },
+    {
+      "category": "Developer Tools",
+      "post_count": 32,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "github",
+        "neovim",
+        "shell",
+        "sdk",
+        "linux"
+      ],
+      "sources": [
+        "TabNews",
+        "Velog",
+        "Qiita",
+        "Zenn"
+      ],
+      "hidden_gem_count": 4,
+      "language_breakdown": {
+        "ja": 19,
+        "pt": 5,
+        "ko": 8
+      },
+      "posts": [
+        {
+          "id": "5d9fa7a08bc09576",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "macosでneovimのbuild時にヘッダファイルが見つからないエラー",
+          "translated_title": "Header File Not Found Error When Building Neovim on macOS",
+          "url": "https://qiita.com/daigo-suhara/items/887cbcf5e5a8414ef420",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "neovim",
+            "shell",
+            "sdk"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": true
+        },
+        {
+          "id": "ef9728ec1af1b7e2",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "pnpm self-update が minimumReleaseAge に止められないようにする",
+          "translated_title": "Preventing pnpm self-update from being blocked by minimumReleaseAge",
+          "url": "https://qiita.com/Mijikko/items/cb5ded4cf78341d5993b",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "linux",
+            "pnpm",
+            "cli"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": false
+        },
+        {
+          "id": "93187333e7106e96",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "E2Eテスト自動化の推進者、ヒーローに頼りっきりをやめよう",
+          "translated_title": "Champions of E2E Test Automation: Let's Stop Relying on Heroes",
+          "url": "https://zenn.dev/team_soda/articles/d4821e2b1efdf6",
+          "score": 22,
+          "scraped_at": "2026-03-13T17:56:21.884711+00:00",
+          "key_technologies": [
+            "test automation",
+            "e2e"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": false
+        },
+        {
+          "id": "9514f7e6a8891ad7",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "【2026/3/9最新】Claude Code新機能『Code Review』、早速使ったら2つのPRで$100超かかった話",
+          "translated_title": "[Latest as of March 9, 2026] I Tried Claude Code's New 'Code Review' Feature Right Away and It Cost Over $100 for Just 2 PRs",
+          "url": "https://zenn.dev/canly/articles/1535fde47ca866",
+          "score": 114,
+          "scraped_at": "2026-03-13T17:56:21.884098+00:00",
+          "key_technologies": [
+            "code review",
+            "claude"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "7a5724d5200afd8f",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "インターン先でCI/CDパイプラインをゼロから構築し、リリース頻度を110倍にした話",
+          "translated_title": "How I Built a CI/CD Pipeline from Scratch at My Internship and Increased Release Frequency by 110x",
+          "url": "https://zenn.dev/satotakahumi/articles/3f950feea0d8b2",
+          "score": 42,
+          "scraped_at": "2026-03-13T17:56:21.884711+00:00",
+          "key_technologies": [
+            "ci/cd pipeline",
+            "ci/cd"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "600ba083477e6eb3",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "Pitch: Eu fiz uma camada em cima do Git para ter o poder do Git sem a parte em que ele tenta arruinar sua semana",
+          "translated_title": "Pitch: I built a layer on top of Git to have the power of Git without the part where it tries to ruin your week",
+          "url": "https://www.tabnews.com.br/MrNull/pitch-eu-fiz-uma-camada-em-cima-do-git-para-ter-o-poder-do-git-sem-a-parte-em-que-ele-tenta-arruinar-sua-semana",
+          "score": 7,
+          "scraped_at": "2026-03-15T14:31:15.575905+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "e971e831c6c33cab",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "RISCV r검증",
+          "translated_title": "RISCV Verification",
+          "url": "https://velog.io/@indol/RISCV-r검증",
+          "score": 0,
+          "scraped_at": "2026-03-15T16:05:18.379259+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        },
+        {
+          "id": "96a7b6524f2f9102",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "[PintOS] Project 3: Virtual Memory",
+          "translated_title": "[PintOS] Project 3: Virtual Memory",
+          "url": "https://velog.io/@hong_sun_kyu/PintOS-Project-3-Virtual-Memory",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": true
+        },
+        {
+          "id": "7394868b37f60266",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "ROOT ファイルを uproot + matplotlib で解析する入門編 : 擬似データ生成からスペクトル解析・Gaussian fit・チャネル別比較・デバッグまで",
+          "translated_title": "Beginner's Guide to Analyzing ROOT Files with uproot + matplotlib: From Pseudo-Data Generation to Spectral Analysis, Gaussian Fitting, Channel Comparison, and Debugging",
+          "url": "https://qiita.com/yamadasuzaku/items/88509366a0ad27201a16",
+          "score": 0,
+          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": false
+        },
+        {
+          "id": "a931d5ae752dd2bb",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "1.4 AOP(관점 지향 프로그래밍)",
+          "translated_title": "1.4 AOP (Aspect-Oriented Programming)",
+          "url": "https://velog.io/@keeff11/1.4-AOP관점-지향-프로그래밍",
+          "score": 0,
+          "scraped_at": "2026-03-15T16:05:18.379259+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        }
+      ]
+    },
+    {
+      "category": "Cybersecurity",
+      "post_count": 14,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "password",
+        "security"
+      ],
+      "sources": [
+        "Habr",
+        "Qiita",
+        "Zenn",
+        "TabNews",
+        "Velog"
+      ],
+      "hidden_gem_count": 8,
+      "language_breakdown": {
+        "ja": 2,
+        "ko": 3,
+        "ru": 8,
+        "pt": 1
+      },
+      "posts": [
+        {
+          "id": "60f8e72cf20fbb50",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "Playwright + OWASP ZAP + Claude Code で E2E テストから脆弱性診断まで一気通貫でできるかやってみた",
+          "translated_title": "Trying Out End-to-End Testing to Vulnerability Assessment in One Go with Playwright + OWASP ZAP + Claude Code",
+          "url": "https://zenn.dev/rescuenow/articles/7192f8ca6ebe48",
+          "score": 29,
+          "scraped_at": "2026-03-15T14:31:13.492026+00:00",
+          "key_technologies": [],
+          "novelty_score": 8.0,
+          "english_coverage": true
+        },
+        {
+          "id": "8c236195adfc14ce",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "👤🎭Os Anonymous voltaram - A Máscara Nunca Caiu: O Hacktivismo Geopolítico de 2026 - Irã - Procuro mais informações ×͜×🥷",
+          "translated_title": "👤🎭The Anonymous Are Back - The Mask Never Fell: The Geopolitical Hacktivism of 2026 - Iran - Seeking More Information ×͜×🥷",
+          "url": "http://www.youtube.com/watch?v=3N9OO_rjYlE",
+          "score": 4,
+          "scraped_at": "2026-03-15T14:31:15.575905+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "a6b8a5968b2bd6be",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Повышаем стабильность Telegram: поднимаем партизанский MTProxy с Fake TLS",
+          "translated_title": "Improving Telegram Stability: Setting Up a Guerrilla MTProxy with Fake TLS",
+          "url": "https://habr.com/ru/articles/994934/",
+          "score": 148,
+          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": false
+        },
+        {
+          "id": "d8e4ef12c4a06a4d",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "РКН и «сибирская блокировка»",
+          "translated_title": "Roskomnadzor and the 'Siberian Blockage'",
+          "url": "https://habr.com/ru/articles/1010336/",
+          "score": 59,
+          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": false
+        },
+        {
+          "id": "b045ccd552aa2823",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Замедляем замедление: как «починить» Telegram",
+          "translated_title": "Slowing Down the Slowdown: How to 'Fix' Telegram",
+          "url": "https://habr.com/ru/articles/1002236/",
+          "score": 143,
+          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": false
+        },
+        {
+          "id": "5c19dc08667ae7a2",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "安全なパスワードの作り方 — 2026年版完全ガイド",
+          "translated_title": "How to Create Secure Passwords — Complete Guide for 2026",
+          "url": "https://qiita.com/dnsrobot/items/d4afeceaff6576438279",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "password"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "cb42275aca4ad8e3",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "Buy Old Gmail Accounts – Secure Payment & Instant Access",
+          "translated_title": "Buy Old Gmail Accounts – Secure Payment & Instant Access",
+          "url": "https://velog.io/@85416/Buy-Old-Gmail-Accounts-Secure-Payment-Instant-Access",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:21.451935+00:00",
+          "key_technologies": [
+            "security"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "50b12b60e0817b77",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Инструкция по обходу блокировки Telegram. Как активировать SOCKS 5",
+          "translated_title": "Guide to Bypassing Telegram Blocking. How to Enable SOCKS5",
+          "url": "https://habr.com/ru/articles/404921/",
+          "score": 15,
+          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
+          "english_coverage": false
+        },
+        {
+          "id": "29e8ece665caf118",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Лучшие виртуальные карты для оплаты зарубежных сервисов и расчётов за границей",
+          "translated_title": "Best Virtual Cards for Paying for Foreign Services and Transactions Abroad",
+          "url": "https://habr.com/ru/articles/1008104/",
+          "score": 67,
+          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
+          "english_coverage": false
+        },
+        {
+          "id": "cbbdc5db888687cb",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Приложение Telega ограничила вход новых пользователей",
+          "translated_title": "Telega App Has Restricted New User Sign-ups",
+          "url": "https://habr.com/ru/articles/1010208/",
+          "score": 10,
+          "scraped_at": "2026-03-15T14:31:14.528697+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
+          "english_coverage": false
+        }
+      ]
+    },
+    {
+      "category": "Web Development",
+      "post_count": 19,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "node.js",
+        "next.js",
+        "deployment",
+        "postgresql",
+        "claude"
+      ],
+      "sources": [
+        "Habr",
+        "Qiita",
+        "Zenn",
+        "Reddit r/programacion",
+        "TabNews",
+        "Velog"
+      ],
+      "hidden_gem_count": 3,
+      "language_breakdown": {
+        "ja": 6,
+        "es": 3,
+        "ru": 1,
+        "pt": 4,
+        "ko": 5
+      },
+      "posts": [
+        {
+          "id": "e487c79017df8f00",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "1. getStaticProps/getServerSidePropsでfetchが失敗する",
+          "translated_title": "1. Fetch fails in getStaticProps/getServerSideProps",
+          "url": "https://qiita.com/NekoByte/items/a75ef48ee44154122cc1",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "node.js",
+            "next.js"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": true
+        },
+        {
+          "id": "b220d6a3eea3a65e",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "O W3C abriu um grupo para reinventar como máquinas (e humanos) guardam conhecimento — e você pode participar",
+          "translated_title": "The W3C has opened a group to reinvent how machines (and humans) store knowledge — and you can participate",
+          "url": "https://www.w3.org/community/pm-kr/",
+          "score": 3,
+          "scraped_at": "2026-03-15T14:31:15.575905+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "ac9ac3c744926c68",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "🚪Além da Sopa de Portas - Pare de usar TCP para tudo - O que vem depois do HTTP - Como arquitetos sêniores estruturam a comunicação interna 🚪🚪🚪🚪🚪",
+          "translated_title": "🚪Beyond Door Soup - Stop Using TCP for Everything - What Comes After HTTP - How Senior Architects Structure Internal Communication 🚪🚪🚪🚪🚪",
+          "url": "https://crom.run/blog/alem-da-sopa-de-portas-pare-de-usar-tcp-para-tudo-o-que-vem-depois-do-http-como-arquitetos-seniores-estruturam-a-comunicacao-interna",
+          "score": 36,
+          "scraped_at": "2026-03-15T14:31:15.575905+00:00",
+          "key_technologies": [],
+          "novelty_score": 7.0,
+          "english_coverage": true
+        },
+        {
+          "id": "cf649f1e87da548e",
+          "source": "TabNews",
+          "source_lang": "pt",
+          "original_title": "Pitch: tomatty: Pomodoro TUI (Bun/TS) que usa rtcwake para pausas reais",
+          "translated_title": "Pitch: tomatty: Pomodoro TUI (Bun/TS) that uses rtcwake for real breaks",
+          "url": "https://github.com/IvanPSG-BR/tomatty",
+          "score": 10,
+          "scraped_at": "2026-03-13T17:56:23.260692+00:00",
+          "key_technologies": [
+            "bun"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        },
+        {
+          "id": "2dc348ab5b35edc1",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "新登場したVite+が速すぎる！— ESLint 100倍、しかも Next.js でも動く",
+          "translated_title": "The New Vite+ Is Incredibly Fast! — 100x Faster Than ESLint, and It Even Works with Next.js",
+          "url": "https://zenn.dev/ashunar0/articles/26d33059997e38",
+          "score": 57,
+          "scraped_at": "2026-03-15T14:31:13.492026+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "d34bd0a9cfd1a2a9",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Rust バックエンドで htmx を使ってみた",
+          "translated_title": "Trying Out htmx with a Rust Backend",
+          "url": "https://qiita.com/nakamura-yzrh/items/8793a51e71ef76b0f5d8",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:15.539077+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": true
+        },
+        {
+          "id": "6cfba26fb712ae87",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "Dart 이벤트 루프(Event Loop) 완벽 이해",
+          "translated_title": "Complete Understanding of the Dart Event Loop",
+          "url": "https://velog.io/@ryullee0911/Dart-이벤트-루프Event-Loop-완벽-이해",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "0c111303ec6366a4",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "onClick으로 끝내지 않은 이유: nested link가 있는 카드 UI 구현기",
+          "translated_title": "Why I Didn't Just Use onClick: Implementing a Card UI with Nested Links",
+          "url": "https://velog.io/@robinyoondev/onClick으로-끝내지-않은-이유-nested-link가-있는-카드-UI-구현기",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "82360628222c4933",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Claude Code だけで本番Webサービスを作った話 — 36時間・2.6億トークンの全記録",
+          "translated_title": "Building a Production Web Service with Claude Code Alone — Complete Record of 36 Hours and 260 Million Tokens",
+          "url": "https://qiita.com/yu-tasaki/items/105e40478c29d4a5292e",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "deployment",
+            "postgresql",
+            "claude",
+            "github"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": false
+        },
+        {
+          "id": "fa8ee10e6bc409e7",
+          "source": "Reddit r/programacion",
+          "source_lang": "es",
+          "original_title": "Fullstack con base en Infraestructura (Next.js / Laravel) - Busco nuevos retos / proyectos",
+          "translated_title": "Fullstack with Infrastructure Background (Next.js / Laravel) - Looking for New Challenges / Projects",
+          "url": "https://reddit.com/r/programacion/comments/1rr0v00/fullstack_con_base_en_infraestructura_nextjs/",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.170028+00:00",
+          "key_technologies": [
+            "computer science",
+            "infrastructure",
+            "fullstack",
+            "community"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": false
+        }
+      ]
+    },
+    {
+      "category": "DevOps & Cloud",
+      "post_count": 16,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "server",
+        "lambda",
+        "java",
+        "aws",
+        "networking"
+      ],
+      "sources": [
+        "Velog",
+        "Reddit r/programacion",
+        "Qiita",
+        "Zenn"
+      ],
+      "hidden_gem_count": 1,
+      "language_breakdown": {
+        "ja": 6,
+        "es": 1,
+        "ko": 9
+      },
+      "posts": [
+        {
+          "id": "310b1a720d6b05eb",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "[Project] Multi-Tenant K8s Cluster on ARM64 - (14) Network Flow",
+          "translated_title": "[Project] Multi-Tenant K8s Cluster on ARM64 - (14) Network Flow",
+          "url": "https://velog.io/@pizza_loves_me/Project-Multi-Tenant-K8s-Cluster-on-ARM64-14-Network-Flow",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:21.451935+00:00",
+          "key_technologies": [
+            "multi-tenant",
+            "architecture",
+            "tenant",
+            "server"
+          ],
+          "novelty_score": 9.0,
+          "english_coverage": true
+        },
+        {
+          "id": "82dbcf8c1ac48b6a",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "AWS EC2에서 Isaac Sim 환경 구축하기 (1/3)",
+          "translated_title": "Setting Up Isaac Sim Environment on AWS EC2 (1/3)",
+          "url": "https://velog.io/@kimi26yg/AWS-EC2에서-Isaac-Sim-환경-구축하기-13",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "10731be9e2ba1e2d",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "Service Mesh 완전 정복 — Istio vs Linkerd 비교 분석",
+          "translated_title": "Mastering Service Mesh — A Comparative Analysis of Istio vs Linkerd",
+          "url": "https://velog.io/@ykgoesdumb/Service-Mesh-완전-정복-Istio-vs-Linkerd-비교-분석",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 6.0,
+          "english_coverage": true
+        },
+        {
+          "id": "cf544dcb9a1367a6",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Cloud Run Functions × Slack Bot × Yahoo!天気で「今日の天気」を自動投稿するBotを作成してみた",
+          "translated_title": "Creating an Automated Weather Bot with Cloud Run Functions × Slack Bot × Yahoo! Weather to Post Daily Forecasts",
+          "url": "https://qiita.com/masazo50/items/a349f1e02a610911609a",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:15.539077+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "46cb34c1ea7298cb",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "AWS세팅 (보안그룹추가 / ECR / ECS / IAM)",
+          "translated_title": "AWS Setup (Add Security Group / ECR / ECS / IAM)",
+          "url": "https://velog.io/@straycat405/AWS세팅-보안그룹추가-ECR-ECS-IAM",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:13.826276+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "b5360593f43aeeaf",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "AWS IoT CoreでRobOps Platformを作ってみた",
+          "translated_title": "Building a RobOps Platform with AWS IoT Core",
+          "url": "https://qiita.com/kojiko430430/items/88639a3b81b226edff05",
+          "score": 0,
+          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "bfa80f60392d528d",
+          "source": "Velog",
+          "source_lang": "ko",
+          "original_title": "[정보처리기사 필기] 물리 데이터베이스 설계",
+          "translated_title": "[Information Processing Engineer Written Exam] Physical Database Design",
+          "url": "https://velog.io/@akasy16/정보처리기사-필기-물리-데이터베이스-설계",
+          "score": 0,
+          "scraped_at": "2026-03-15T16:05:18.379259+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "79d6783a4f87b690",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "EventBridge + LambdaでMinecraft用サーバの利用料をEIPの分まで削減しよう",
+          "translated_title": "Reduce Minecraft Server Costs Down to the EIP Fee with EventBridge + Lambda",
+          "url": "https://qiita.com/hamiltonsammy/items/61bb8c8c4db6ff537bdb",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "server",
+            "lambda",
+            "java",
+            "aws"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": false
+        },
+        {
+          "id": "5308fdbc8d427c7b",
+          "source": "Reddit r/programacion",
+          "source_lang": "es",
+          "original_title": "Graduado en filosofía tratando de elegir entre Sociología o Ingeniería de Sistemas — ¿dilema?",
+          "translated_title": "Philosophy graduate trying to choose between Sociology or Systems Engineering — dilemma?",
+          "url": "https://reddit.com/r/programacion/comments/1rrijn3/graduado_en_filosofía_tratando_de_elegir_entre/",
+          "score": 2,
+          "scraped_at": "2026-03-13T17:56:22.170028+00:00",
+          "key_technologies": [
+            "networking"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "12994991d8292b7a",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Oracle 実行計画",
+          "translated_title": "Oracle Execution Plan",
+          "url": "https://qiita.com/sampei_yuya/items/ff095ed2c477401b48b0",
+          "score": 0,
+          "scraped_at": "2026-03-15T14:31:15.539077+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        }
+      ]
+    },
+    {
+      "category": "Open Source",
+      "post_count": 8,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "open source",
+        "documentation",
+        "open-source",
+        "deployment",
+        "repository"
+      ],
+      "sources": [
+        "Habr",
+        "Qiita",
+        "Zenn",
+        "V2EX",
+        "Reddit r/programacion"
+      ],
+      "hidden_gem_count": 1,
+      "language_breakdown": {
+        "ja": 5,
+        "zh": 1,
+        "ru": 1,
+        "es": 1
+      },
+      "posts": [
+        {
+          "id": "872c4073d84b5452",
+          "source": "V2EX",
+          "source_lang": "zh",
+          "original_title": "怎么看小龙虾作者指腾讯爬完技能库无捐助且抱怨作者限速，而腾讯说我在帮你分流这个事？",
+          "translated_title": "What do you think about the Crayfish author pointing out that Tencent scraped the entire skill repository without any donation and complained about the author's rate limiting, while Tencent claims they're helping with traffic distribution?",
+          "url": "https://www.v2ex.com/t/1197881",
+          "score": 73,
+          "scraped_at": "2026-03-13T17:56:22.641395+00:00",
+          "key_technologies": [
+            "repository",
+            "donation"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": false
+        },
+        {
+          "id": "de40dc4c02902ae4",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Один ИИ за пять дней уничтожил двадцать лет опенсорсной защиты. Вот как это было",
+          "translated_title": "One AI Destroyed Twenty Years of Open Source Protection in Five Days. Here's How It Happened",
+          "url": "https://habr.com/ru/articles/1009652/",
+          "score": 17,
+          "scraped_at": "2026-03-13T17:56:22.202048+00:00",
+          "key_technologies": [
+            "open source",
+            "copyleft",
+            "claude",
+            "python"
+          ],
+          "novelty_score": 8.0,
+          "english_coverage": true
+        },
+        {
+          "id": "f4802eccfe103d99",
+          "source": "Reddit r/programacion",
+          "source_lang": "es",
+          "original_title": "Open source API client (offline-first, git-native, Markdown). Buscando feedback",
+          "translated_title": "Open source API client (offline-first, git-native, Markdown). Looking for feedback",
+          "url": "https://reddit.com/r/programacion/comments/1rt0120/open_source_api_client_offlinefirst_gitnative/",
+          "score": 2,
+          "scraped_at": "2026-03-15T14:31:14.553134+00:00",
+          "key_technologies": [],
+          "novelty_score": 5.0,
+          "english_coverage": true
+        },
+        {
+          "id": "651b5cc2d9f9c4d9",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "OpenClawライクなソフトをまとめてみた",
+          "translated_title": "A Roundup of OpenClaw-Like Software",
+          "url": "https://zenn.dev/karaage0703/articles/0e2e3484169db2",
+          "score": 55,
+          "scraped_at": "2026-03-15T14:31:13.492026+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "27ce3384cb0d9a0e",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "私のOSS活動元年を振り返ったらAIと下心が原動力だった",
+          "translated_title": "Looking Back on My First Year of OSS Contributions: AI and Self-Interest Were the Driving Forces",
+          "url": "https://zenn.dev/jackchuka/articles/473ef7cc70efbc",
+          "score": 6,
+          "scraped_at": "2026-03-15T14:31:13.492026+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "2e14799c4c05eb4e",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "OpenClawを日本語で：公式ドキュメント翻訳プロジェクトのお知らせ",
+          "translated_title": "OpenClaw in Japanese: Announcement of Official Documentation Translation Project",
+          "url": "https://qiita.com/mixfox/items/d62bfd751eeb51e8d580",
+          "score": 0,
+          "scraped_at": "2026-03-13T17:56:22.478611+00:00",
+          "key_technologies": [
+            "documentation",
+            "open source",
+            "open-source",
+            "deployment"
+          ],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "bed04893b9d617d1",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "業務ツールをGitHubへ → AIでOSS化まで：CiscoログをPowerShellで比較するツールを作った話",
+          "translated_title": "From Internal Tools to GitHub → OSS with AI: How I Built a PowerShell Tool to Compare Cisco Logs",
+          "url": "https://qiita.com/Termnix-IT/items/77e018ac4b1b11b34f49",
+          "score": 0,
+          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "5ad8e61af8e3fde6",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Gitの main と origin/main の違いを理解する",
+          "translated_title": "Understanding the Difference Between main and origin/main in Git",
+          "url": "https://qiita.com/softbase/items/e0665015c982eaf4d600",
+          "score": 0,
+          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
+          "key_technologies": [],
+          "novelty_score": 2.0,
+          "english_coverage": true
+        }
+      ]
+    },
+    {
+      "category": "Mobile Development",
+      "post_count": 4,
+      "velocity": 9999,
+      "momentum": "new",
+      "key_technologies": [
+        "dart"
+      ],
+      "sources": [
+        "Habr",
+        "Qiita",
+        "Zenn"
+      ],
+      "hidden_gem_count": 2,
+      "language_breakdown": {
+        "ru": 1,
+        "ja": 3
+      },
+      "posts": [
+        {
+          "id": "1cdcbcff7f00ccce",
+          "source": "Habr",
+          "source_lang": "ru",
+          "original_title": "Учёные обнаружили первые прямые доказательства обмена материалами между двойными астероидами",
+          "translated_title": "Scientists Discover First Direct Evidence of Material Exchange Between Binary Asteroids",
+          "url": "https://habr.com/ru/articles/1008730/",
+          "score": 14,
+          "scraped_at": "2026-03-13T17:56:22.202048+00:00",
+          "key_technologies": [
+            "dart"
+          ],
+          "novelty_score": 6.0,
+          "english_coverage": false
+        },
+        {
+          "id": "87adbdf3e218dba1",
+          "source": "Zenn",
+          "source_lang": "ja",
+          "original_title": "【Flutter】API トークンを「適切」に管理する",
+          "translated_title": "[Flutter] Properly Managing API Tokens",
+          "url": "https://zenn.dev/chooyan/articles/2eddee6e2f5eac",
+          "score": 14,
+          "scraped_at": "2026-03-15T14:31:13.492026+00:00",
+          "key_technologies": [],
+          "novelty_score": 4.0,
+          "english_coverage": true
+        },
+        {
+          "id": "12beade659e35be0",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "Marukuma Drop にLINE絵文字の自動生成機能を追加してみた",
+          "translated_title": "Added Automatic LINE Emoji Generation Feature to Marukuma Drop",
+          "url": "https://qiita.com/flip-flop/items/a08a3dd1076d87e3cbf8",
+          "score": 0,
+          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
+          "english_coverage": true
+        },
+        {
+          "id": "b1bd8f4844589420",
+          "source": "Qiita",
+          "source_lang": "ja",
+          "original_title": "高専ロボコン/NHK学ロボ 技術公開まとめ",
+          "translated_title": "KOSEN Robot Contest / NHK Student Robot Contest Technical Disclosure Compilation",
+          "url": "https://qiita.com/Raido_o/items/cb026aa22bce3bcec424",
+          "score": 0,
+          "scraped_at": "2026-03-15T15:56:39.621917+00:00",
+          "key_technologies": [],
+          "novelty_score": 3.0,
+          "english_coverage": false
+        }
+      ]
+    }
+  ],
+  "project_ideas": [
+    {
+      "title": "AI Code Assistant",
+      "one_liner": "A lightweight AI assistant that helps developers write and debug code in real-time.",
+      "category": "Developer Tools",
+      "difficulty": "Medium",
+      "source_topics": [
+        "Why the Claude Code Tutorial Video Resonates. It Looks Like a Setup Manual, But It's Actually About How Your Work Process Will Change",
+        "Most Things Can Now Be Done Just by Using Claude Code's Agent Team"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "Multi-Tenant K8s Cluster Simulator",
+      "one_liner": "A simulator for testing and understanding multi-tenant Kubernetes clusters on ARM64.",
+      "category": "DevOps & Cloud",
+      "difficulty": "Hard",
+      "source_topics": [
+        "[Project] Multi-Tenant K8s Cluster on ARM64 - (14) Network Flow"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "Dashboard Conversion Optimizer",
+      "one_liner": "A tool that analyzes and suggests improvements for dashboard landing pages to increase conversion rates.",
+      "category": "SaaS",
+      "difficulty": "Medium",
+      "source_topics": [
+        "Why Your Dashboard Landing Page Isn't Converting (And How to Fix It)"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "Neovim Build Helper",
+      "one_liner": "A utility to resolve common build errors when setting up Neovim on macOS.",
+      "category": "Developer Tools",
+      "difficulty": "Easy",
+      "source_topics": [
+        "Header File Not Found Error When Building Neovim on macOS"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "Static Props Fetcher",
+      "one_liner": "A debugging tool for fetch failures in getStaticProps and getServerSideProps in Next.js.",
+      "category": "Web Development",
+      "difficulty": "Easy",
+      "source_topics": [
+        "1. Fetch fails in getStaticProps/getServerSideProps"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "pnpm Update Manager",
+      "one_liner": "A tool to manage and prevent pnpm self-update from being blocked by minimumReleaseAge.",
+      "category": "Developer Tools",
+      "difficulty": "Easy",
+      "source_topics": [
+        "Preventing pnpm self-update from being blocked by minimumReleaseAge"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "AI-Powered Biology Learning",
+      "one_liner": "An interactive learning platform that uses AI to teach high school biology concepts.",
+      "category": "AI & ML",
+      "difficulty": "Medium",
+      "source_topics": [
+        "High School Biology and Machine Learning"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "Physics AI Explorer",
+      "one_liner": "An AI-driven tool to explore and understand high school physics concepts.",
+      "category": "AI & ML",
+      "difficulty": "Medium",
+      "source_topics": [
+        "Investigating High School Physics and Machine Learning with Generative AI"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
+    },
+    {
+      "title": "Knowledge Storage Reinventor",
+      "one_liner": "A tool that helps machines and humans store knowledge more efficiently, inspired by W3C's new group.",
+      "category": "Web Development",
+      "difficulty": "Hard",
+      "source_topics": [
+        "The W3C has opened a group to reinvent how machines (and humans) store knowledge — and you can participate"
+      ],
+      "generated_at": "2026-03-15T16:05:42.315534+00:00"
     }
   ]
 }

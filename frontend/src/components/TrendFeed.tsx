@@ -167,8 +167,8 @@ export function TrendFeed({
                   <div className="trend-header-top">
                     <h2 className="trend-category">{trend.category}</h2>
                     <div className="trend-header-badges">
-                      <VelocityBadge velocity={trend.velocity} momentum={trend.momentum} />
-                      <MomentumBadge momentum={trend.momentum} />
+                      <VelocityBadge velocity={trend.velocity} momentum={trend.momentum || "new"} />
+                      <MomentumBadge momentum={trend.momentum || "new"} />
                     </div>
                   </div>
                   <LanguageBar breakdown={trend.language_breakdown} />

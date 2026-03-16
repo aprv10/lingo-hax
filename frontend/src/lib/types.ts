@@ -25,7 +25,7 @@ export interface Trend {
   category: string;
   post_count: number;
   velocity: number; // percentage change, can be Infinity
-  momentum: Momentum;
+  momentum?: Momentum;
   key_technologies: string[];
   sources: string[];
   hidden_gem_count: number;
@@ -33,10 +33,20 @@ export interface Trend {
   posts: Post[];
 }
 
+export interface ProjectIdea {
+  title: string;
+  one_liner: string;
+  category: string;
+  difficulty: "Easy" | "Medium" | "Hard";
+  source_topics: string[];
+  generated_at: string; // ISO timestamp
+}
+
 export interface GlobalTrendsData {
   generated_at: string; // ISO timestamp
   total_posts: number;
   trends: Trend[];
+  project_ideas?: ProjectIdea[];
 }
 
 // ──────────────────────────────────────

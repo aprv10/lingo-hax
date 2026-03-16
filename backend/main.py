@@ -9,7 +9,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from scrape import scrape_all_sources
 from translation import translate_posts
-from brain import classify_posts
+from brain import classify_posts, generate_project_ideas
 from database import (
     init_db,
     bulk_insert_posts,
@@ -19,12 +19,9 @@ from database import (
     bulk_save_trend_snapshots,
 )
 
-# Ensure public/ directory exists for JSON export
-PUBLIC_DIR = os.path.join(os.path.dirname(__file__), "public")
-os.makedirs(PUBLIC_DIR, exist_ok=True)
-
-# Also keep the flat-array export in backend/ for backward compat
-BACKEND_DIR = os.path.dirname(__file__) or "."
+# ── Config: absolute path to the Next.js frontend public/ folder ─────────────
+FRONTEND_PUBLIC_DIR = r"C:\Users\APOORV\OneDrive\Desktop\Lingo hax\frontend\public"
+os.makedirs(FRONTEND_PUBLIC_DIR, exist_ok=True)
 
 
 async def run_pipeline():
@@ -94,9 +91,16 @@ async def run_pipeline():
     ]
     await bulk_save_trend_snapshots(snapshots)
 
-    # 8. Export JSON (using DB-sourced data, async file I/O)
+    # 8. Generate project ideas from top trending posts via Mistral
+    print("\n💡 Generating project ideas...")
+    t12 = time.perf_counter()
+    project_ideas = await generate_project_ideas(db_posts)
+    t13 = time.perf_counter()
+    print(f"   Idea generation done in {t13 - t12:.2f}s")
+
+    # 9. Export JSON (using DB-sourced data, async file I/O)
     print("\n📦 Exporting JSON...")
-    await _export_trends_json(db_posts, category_posts)
+    await _export_trends_json(db_posts, category_posts, project_ideas)
 
     print(f"\n✅ Done. {len(new_posts)} posts added, {len(category_posts)} trends updated.")
     print("=" * 60 + "\n")
@@ -105,11 +109,12 @@ async def run_pipeline():
 async def _export_trends_json(
     db_posts: list[dict],
     category_groups: dict[str, list[dict]],
+    project_ideas: list[dict] | None = None,
 ):
     """
     Export the enriched trends JSON in two formats:
-    1. ./public/categorized_global_trends.json — enriched schema with trends wrapper
-    2. ./categorized_global_trends.json — flat array for backward compat with frontend
+    1. <FRONTEND_PUBLIC_DIR>/categorized_global_trends.json — enriched schema with trends wrapper
+    2. <FRONTEND_PUBLIC_DIR>/categorized_global_trends.json — flat array for backward compat
     """
     # Compute velocities for all categories in one DB connection
     categories = list(category_groups.keys())
@@ -132,8 +137,24 @@ async def _export_trends_json(
             1 for p in posts_in_cat if not p.get("english_coverage", True)
         )
 
+        # Language breakdown (count posts per source language)
+        lang_counter: Counter = Counter()
+        for p in posts_in_cat:
+            lang = p.get("source_lang", "")
+            if lang:
+                lang_counter[lang] += 1
+        language_breakdown = dict(lang_counter)
+
         # Velocity (from batch lookup)
         velocity = velocities.get(cat, 0.0)
+
+        # Momentum (derived from velocity)
+        if velocity == float("inf") or velocity >= 9999:
+            momentum = "new"
+        elif velocity > 0:
+            momentum = "rising"
+        else:
+            momentum = "falling"
 
         # Top 10 posts by novelty_score desc
         sorted_posts = sorted(
@@ -152,6 +173,7 @@ async def _export_trends_json(
                 "translated_title": p.get("translated_title", ""),
                 "url": p.get("url", ""),
                 "score": p.get("score", 0),
+                "scraped_at": p.get("scraped_at", ""),
                 "key_technologies": p.get("key_technologies", []),
                 "novelty_score": p.get("novelty_score", 5),
                 "english_coverage": p.get("english_coverage", True),
@@ -161,20 +183,23 @@ async def _export_trends_json(
             "category": cat,
             "post_count": len(posts_in_cat),
             "velocity": velocity if velocity != float("inf") else 9999,
+            "momentum": momentum,
             "key_technologies": top_technologies,
             "sources": sources,
             "hidden_gem_count": hidden_gem_count,
+            "language_breakdown": language_breakdown,
             "posts": trend_posts,
         })
 
-    # Enriched format → ./public/
+    # Enriched format → frontend/public/
     enriched_output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_posts": len(db_posts),
         "trends": trends,
+        "project_ideas": project_ideas or [],
     }
 
-    # Flat-array format → ./categorized_global_trends.json (backward compat)
+    # Flat-array format → frontend/public/ (backward compat)
     flat_posts = []
     for post in db_posts:
         flat_posts.append({
@@ -192,8 +217,8 @@ async def _export_trends_json(
         })
 
     # Write both files using asyncio.to_thread to avoid blocking the event loop
-    enriched_path = os.path.join(PUBLIC_DIR, "categorized_global_trends.json")
-    flat_path = os.path.join(BACKEND_DIR, "categorized_global_trends.json")
+    enriched_path = os.path.join(FRONTEND_PUBLIC_DIR, "categorized_global_trends.json")
+    flat_path = os.path.join(FRONTEND_PUBLIC_DIR, "categorized_global_trends_flat.json")
 
     def _write_enriched():
         with open(enriched_path, "w", encoding="utf-8") as f:

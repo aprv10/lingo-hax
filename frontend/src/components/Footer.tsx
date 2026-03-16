@@ -1,145 +1,118 @@
 "use client";
 
-import { Globe, GithubLogo, Heart } from "@phosphor-icons/react";
-import { LANGUAGE_MAP, type SourceLang } from "@/lib/types";
-
-const LANGUAGES = Object.entries(LANGUAGE_MAP) as [SourceLang, { flag: string; label: string }][];
+import { useTheme } from "@/components/ThemeProvider";
 
 export function Footer() {
+  const { theme } = useTheme();
+
   return (
-    <footer className="ga-footer">
-      <div className="footer-inner">
-        {/* Left: branding */}
-        <div className="footer-brand">
-          <p className="footer-title">GLOBAL ARBITRAGE</p>
-          <p className="footer-sub">
-            Surfacing non-English tech trends before they go global.
+    <footer className="editorial-footer">
+      <div className="footer-content">
+        {/* Centered quote */}
+        <p className="footer-quote">
+          "The best ideas don't wait for translation."
+        </p>
+
+        {/* Source communities list */}
+        <p className="footer-sources">
+          Qiita &middot; Zenn &middot; V2EX &middot; Habr &middot; Velog &middot; TabNews &middot; r/programacion
+        </p>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="footer-bottom">
+        <div className="footer-bottom-inner">
+          <p className="footer-copyright">
+            &copy; {new Date().getFullYear()} Global Arbitrage
           </p>
-        </div>
-
-        {/* Center: language flags */}
-        <div className="footer-languages">
-          {LANGUAGES.map(([code, { flag, label }]) => (
-            <span key={code} className="footer-lang" title={label}>
-              {flag}
-            </span>
-          ))}
-        </div>
-
-        {/* Right: credits */}
-        <div className="footer-credits">
-          <p className="footer-powered">
+          <p className="footer-credit">
             Powered by <a href="https://lingo.dev" target="_blank" rel="noopener noreferrer">lingo.dev</a>
-          </p>
-          <p className="footer-copy">
-            <Globe weight="regular" size={12} />
-            &nbsp;7 languages · 8 communities · real-time
           </p>
         </div>
       </div>
 
       <style jsx>{`
-        .ga-footer {
+        .editorial-footer {
           background-color: var(--surface-flip);
-          color: rgba(255, 255, 255, 0.6);
-          padding: 40px 48px;
-          margin-top: 0;
+          color: #ffffff;
+          padding-top: 80px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
-        .footer-inner {
+        .footer-content {
+          max-width: 800px;
+          padding: 0 24px;
+          margin-bottom: 80px;
+        }
+
+        .footer-quote {
+          font-family: var(--font-cormorant), serif;
+          font-size: 32px;
+          font-style: italic;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 24px;
+          line-height: 1.3;
+        }
+
+        .footer-sources {
+          font-family: var(--font-dm-sans), sans-serif;
+          font-size: 13px;
+          letter-spacing: 0.05em;
+          color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-bottom {
+          width: 100%;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 24px;
+        }
+
+        .footer-bottom-inner {
           max-width: 1400px;
           margin: 0 auto;
           display: flex;
-          align-items: center;
           justify-content: space-between;
-          gap: 32px;
-        }
-
-        .footer-brand {
-          flex-shrink: 0;
-        }
-
-        .footer-title {
-          font-family: var(--font-dm-sans), sans-serif;
-          font-size: 11px;
-          letter-spacing: 0.14em;
-          color: rgba(255, 255, 255, 0.4);
-          margin-bottom: 4px;
-        }
-
-        .footer-sub {
-          font-family: var(--font-cormorant), serif;
-          font-size: 16px;
-          font-style: italic;
-          color: rgba(255, 255, 255, 0.55);
-        }
-
-        .footer-languages {
-          display: flex;
-          gap: 12px;
-          font-size: 20px;
-        }
-
-        .footer-lang {
-          opacity: 0.7;
-          transition: opacity 200ms ease, transform 200ms ease;
-          cursor: default;
-        }
-
-        .footer-lang:hover {
-          opacity: 1;
-          transform: scale(1.15);
-        }
-
-        .footer-credits {
-          flex-shrink: 0;
-          text-align: right;
-        }
-
-        .footer-powered {
-          font-family: var(--font-dm-sans), sans-serif;
-          font-size: 12px;
-          color: rgba(255, 255, 255, 0.45);
-          margin-bottom: 4px;
-        }
-
-        .footer-powered a {
-          color: rgba(255, 255, 255, 0.65);
-          text-decoration: underline;
-          text-underline-offset: 2px;
-        }
-
-        .footer-powered a:hover {
-          color: rgba(255, 255, 255, 0.9);
-        }
-
-        .footer-copy {
-          font-family: var(--font-dm-mono), monospace;
-          font-size: 11px;
-          color: rgba(255, 255, 255, 0.3);
-          display: flex;
           align-items: center;
-          justify-content: flex-end;
-          gap: 2px;
+          font-family: var(--font-dm-mono), monospace;
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.3);
         }
 
-        @media (max-width: 768px) {
-          .ga-footer {
-            padding: 32px 24px;
+        .footer-credit a {
+          color: rgba(255, 255, 255, 0.5);
+          text-decoration: underline;
+          text-decoration-color: rgba(255, 255, 255, 0.2);
+          text-underline-offset: 4px;
+          transition: color 200ms ease, text-decoration-color 200ms ease;
+        }
+
+        .footer-credit a:hover {
+          color: rgba(255, 255, 255, 0.9);
+          text-decoration-color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 640px) {
+          .editorial-footer {
+            padding-top: 60px;
           }
 
-          .footer-inner {
+          .footer-content {
+            margin-bottom: 60px;
+          }
+
+          .footer-quote {
+            font-size: 26px;
+          }
+
+          .footer-bottom-inner {
             flex-direction: column;
+            gap: 12px;
             text-align: center;
-            gap: 20px;
-          }
-
-          .footer-credits {
-            text-align: center;
-          }
-
-          .footer-copy {
-            justify-content: center;
           }
         }
       `}</style>

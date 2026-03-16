@@ -3,18 +3,50 @@
 import { motion } from "framer-motion";
 import { Sun, Moon } from "@phosphor-icons/react";
 import { useTheme } from "@/components/ThemeProvider";
-import { LiveFeed } from "@/components/LiveFeed";
+import WorldMap from "@/components/ui/world-map";
+
+const SOURCE_COUNTRIES_DOTS = [
+  { start: { lat: 40.7128, lng: -74.0060 }, end: { lat: 51.5074, lng: -0.1278 } }, // NY to London
+  { start: { lat: 35.6762, lng: 139.6503 }, end: { lat: 34.0522, lng: -118.2437 } }, // Tokyo to LA
+  { start: { lat: -23.5505, lng: -46.6333 }, end: { lat: 40.4168, lng: -3.7038 } }, // Sao Paulo to Madrid
+  { start: { lat: -33.9249, lng: 18.4241 }, end: { lat: 19.0760, lng: 72.8777 } }, // Cape Town to Mumbai
+  { start: { lat: -33.8688, lng: 151.2093 }, end: { lat: 1.3521, lng: 103.8198 } }, // Sydney to Singapore
+  { start: { lat: 19.4326, lng: -99.1332 }, end: { lat: -34.6037, lng: -58.3816 } }, // MX City to Buenos Aires
+  { start: { lat: 39.9042, lng: 116.4074 }, end: { lat: 52.5200, lng: 13.4050 } }, // Beijing to Berlin
+  { start: { lat: 30.0444, lng: 31.2357 }, end: { lat: 25.7617, lng: -80.1918 } }, // Cairo to Miami
+  { start: { lat: 41.9028, lng: 12.4964 }, end: { lat: -1.2921, lng: 36.8219 } }, // Rome to Nairobi
+];
+
 
 const HEADLINE_WORDS = ["Trends", "the", "internet", "hasn't", "discovered", "yet."];
 
-const SUB_TEXT_LINE_1 = "We monitor 8 non-English tech communities in real time.";
-const SUB_TEXT_LINE_2 = "By the time it hits English Twitter, you already knew.";
+const SUB_TEXT_LINE_1 = "The internet is bigger than English.";
+const SUB_TEXT_LINE_2 = "By the time it hits English Twitter, ";
+const SUB_TEXT_HIGHLIGHT = "you already knew.";
 
 export function Masthead() {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <section className="masthead">
+      {/* Background Map layer */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <WorldMap
+          dots={SOURCE_COUNTRIES_DOTS}
+          lineColor={theme === "dark" ? "#a3a3a3" : "#404040"}
+          className="w-full h-full absolute inset-0 bg-white dark:bg-black font-sans flex items-center justify-center [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
+        />
+        {/* Gradient overlay to ensure text is readable */}
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          background: theme === "dark" 
+            ? "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)" 
+            : "linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
+          pointerEvents: "none"
+        }} />
+      </div>
+
       {/* Theme toggle — fixed top-right */}
       <button
         onClick={toggleTheme}
@@ -52,7 +84,7 @@ export function Masthead() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.5,
-                  delay: 0.3 + i * 0.08,
+                  delay: 0.3 + i * 0.1,
                   ease: [0.25, 0.1, 0.25, 1],
                 }}
               >
@@ -94,6 +126,9 @@ export function Masthead() {
             {SUB_TEXT_LINE_1}
             <br />
             {SUB_TEXT_LINE_2}
+            <span className="masthead-highlight italic font-serif">
+              {SUB_TEXT_HIGHLIGHT}
+            </span>
           </motion.p>
 
           {/* CTA Buttons */}
@@ -103,20 +138,27 @@ export function Masthead() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
           >
-            <button className="pill pill-filled masthead-btn">
+            <button
+              className="pill pill-filled masthead-btn"
+              onClick={() =>
+                document.getElementById("briefing")?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               View Briefing
             </button>
-            <button className="pill pill-ghost masthead-btn">
+            <button
+              className="pill pill-ghost masthead-btn"
+              onClick={() =>
+                document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               How it works
             </button>
           </motion.div>
         </div>
       </div>
 
-      {/* Right half — Live Feed */}
-      <div className="masthead-right">
-        <LiveFeed />
-      </div>
+
 
       <style jsx>{`
         .masthead {
@@ -148,13 +190,14 @@ export function Masthead() {
           color: var(--accent);
         }
 
-        /* Left half */
         .masthead-left {
           flex: 1;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 80px 60px 80px 80px;
+          position: relative;
+          z-index: 10;
         }
 
         .masthead-left-inner {
@@ -193,10 +236,28 @@ export function Masthead() {
 
         .masthead-subtext {
           font-family: var(--font-dm-sans), sans-serif;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.7;
           color: var(--text-muted);
           margin-bottom: 36px;
+        }
+
+        .masthead-highlight {
+          position: relative;
+          display: inline-block;
+          white-space: nowrap;
+          z-index: 1;
+        }
+        
+        .masthead-highlight::before {
+          content: "";
+          position: absolute;
+          inset: auto -6px -2px -6px;
+          height: 35%;
+          background: linear-gradient(100deg, color-mix(in srgb, var(--accent) 60%, transparent) 0%, color-mix(in srgb, var(--accent) 60%, transparent) 100%);
+          z-index: -1;
+          transform: rotate(-1deg);
+          border-radius: 4px;
         }
 
         .masthead-cta {
@@ -215,19 +276,9 @@ export function Masthead() {
           opacity: 0.85;
         }
 
-        /* Right half — dark live feed panel */
-        .masthead-right {
-          width: 400px;
-          flex-shrink: 0;
-          background-color: var(--surface-flip);
-          position: relative;
-          overflow: hidden;
-        }
-
         /* Responsive */
         @media (max-width: 1024px) {
           .masthead {
-            flex-direction: column;
             min-height: auto;
           }
 
@@ -237,11 +288,6 @@ export function Masthead() {
 
           .masthead-headline {
             font-size: 56px;
-          }
-
-          .masthead-right {
-            width: 100%;
-            height: 400px;
           }
         }
 

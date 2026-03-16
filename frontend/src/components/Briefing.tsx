@@ -377,7 +377,7 @@ export function Briefing({ data }: BriefingProps) {
   let globalIdx = 0;
 
   return (
-    <section className={s.wrapper}>
+    <section id="briefing" className={s.wrapper}>
       <div className={s.grid}>
         {/* ── LEFT SIDEBAR ── */}
         <Sidebar
@@ -408,7 +408,8 @@ export function Briefing({ data }: BriefingProps) {
                 </div>
               ) : (
                 filteredTrends.map((trend, trendIdx) => {
-                  const isRising = trend.momentum === "rising" || trend.momentum === "new";
+                  const trendMomentum = trend.momentum || "new";
+                  const isRising = trendMomentum === "rising" || trendMomentum === "new";
                   return (
                     <div key={trend.category} className={s.trendSection}>
                       {/* Trend Header */}
@@ -425,17 +426,17 @@ export function Briefing({ data }: BriefingProps) {
                             </span>
                             <span
                               className={`${s.momentumBadge} ${
-                                trend.momentum === "rising"
+                                trendMomentum === "rising"
                                   ? s.momentumRising
-                                  : trend.momentum === "new"
+                                  : trendMomentum === "new"
                                   ? s.momentumNew
                                   : s.momentumFalling
                               }`}
                             >
-                              {trend.momentum === "rising" && <TrendUp weight="bold" size={14} />}
-                              {trend.momentum === "new" && <Sparkle weight="fill" size={14} />}
-                              {trend.momentum === "falling" && <TrendDown weight="bold" size={14} />}
-                              {trend.momentum.toUpperCase()}
+                              {trendMomentum === "rising" && <TrendUp weight="bold" size={14} />}
+                              {trendMomentum === "new" && <Sparkle weight="fill" size={14} />}
+                              {trendMomentum === "falling" && <TrendDown weight="bold" size={14} />}
+                              {trendMomentum.toUpperCase()}
                             </span>
                           </div>
                         </div>
